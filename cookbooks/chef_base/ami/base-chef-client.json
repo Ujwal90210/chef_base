@@ -1,0 +1,64 @@
+{
+  "variables": {
+    "ENV": "scds-prod",
+    "HTTP_PROXY": "",
+    "aws_source_ami": "ami-26ebbc5c",
+    "vpc_id": "vpc-f8ff2280",
+    "subnet_id": "",
+    "iam_profile_name": "Jenkins-chef-role",
+    "instance_type": "m3.large",
+    "PROJECT": "Test",
+    "ENV": "Dev",
+    "region": "",
+    "aws_ssh_key_id" : "fox-ec2"
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "communicator": "ssh",
+    "ssh_pty": "True",
+    "ssh_keypair_name" : "fox-ec2",
+    "ssh_private_key_file" : "/Users/ujwaly/Development/keys/fox-ec2.pem",
+    "ssh_timeout" : "10m",
+    "region": "{{user `region`}}",
+    "source_ami": "{{user `aws_source_ami`}}",
+    "instance_type": "{{user `instance_type`}}",
+    "ssh_username": "ec2-user",
+    "ami_name": "packer-ffe-base-rhel-{{user `ENV`}}-{{isotime | clean_ami_name}}",
+    "user_data_file": "ami/user-data.txt",
+    "vpc_id": "{{user `vpc_id`}}",
+    "subnet_id": "{{user `subnet_id`}}",
+    "iam_instance_profile": "{{user `iam_profile_name`}}",
+    "tags": {
+        "name": "packer-ffe-base-rhel",
+        "env": "{{user `ENV`}}",
+        "project": "{{user `PROJECT`}}"
+    },
+    "launch_block_device_mappings": [{
+        "device_name": "/dev/xvda",
+        "volume_size": 8,
+        "volume_type": "gp2",
+        "delete_on_termination": true
+    }],
+    "ami_block_device_mappings": [{
+        "device_name": "/dev/xvda",
+        "volume_size": 8,
+        "volume_type": "gp2",
+        "delete_on_termination": true
+    }]
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "script": "ami/scripts/base.sh",
+    "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E http_proxy={{user `HTTP_PROXY`}} https_proxy={{user `HTTP_PROXY`}} no_proxy=169.254.169.254 '{{ .Path }}'",
+    "expect_disconnect": true
+	},
+  {
+  "type": "chef-solo",
+  "cookbook_paths": ["cookbooks"],
+  "run_list" : "recipe[example::default]"
+  },
+  {
+    "type": "shell",
+    "inline": ["sudo rm -f /root/.ssh/authorized_keys"]
+  }]
+}

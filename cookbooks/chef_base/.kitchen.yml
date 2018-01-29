@@ -1,0 +1,39 @@
+---
+driver:
+  name: ec2
+  availability_zone: e
+  region: <%= ENV['AWS_REGION'] || 'us-east-1' %>
+  aws_ssh_key_id: <%= ENV['AWS_KEYPAIR'] || 'fox-ec2' %>
+  instance_type: <%= ENV['AWS_FLAVOR'] || 'm3.large' %>
+  subnet_id: <%= ENV['AWS_SUBNET'] || 'subnet-98d376a7' %>
+  iam_profile_name : Jenkins-chef-role
+  security_group_ids:
+    - <%= ENV['AWS_SECURITY_GROUP_ID'] || 'sg-fb331c8e' %>
+  require_chef_omnibus: true
+
+provisioner:
+  name: chef_zero
+
+transport:
+#  name: sshtar
+#  compression: zlib
+#  compression_level: 9
+  username: ec2-user
+  ssh_key: /Users/ujwaly/Development/keys/fox-ec2.pem
+
+platforms:
+  - name: rhel
+    driver:
+      image_id: ami-26ebbc5c
+      block_device_mappings:
+        - device_name: '/dev/xvde'
+          ebs:
+            volume_size: 10
+            delete_on_termination: true
+      #user_data: 'ami/user-data.txt'
+
+
+suites:
+  - name: default
+    run_list:
+      - recipe[linux_base::default]
