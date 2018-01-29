@@ -6,7 +6,7 @@
 
 require 'spec_helper'
 
-describe 'linux_base::default' do
+describe 'cookbook_base::default' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
       ChefSpec::ServerRunner.new(platform: 'redhat' , version: '6.8').converge(described_recipe)
