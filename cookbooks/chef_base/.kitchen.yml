@@ -36,4 +36,4 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[cookbook_base::default]
+      - recipe[chef_base::default]
