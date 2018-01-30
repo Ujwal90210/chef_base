@@ -17,16 +17,15 @@ pipeline {
           }
             steps {
                 echo 'Building..'
-                sh 'cd /home/ec2-user/workspace/chef_cookbook_build/chef_base/cookbooks/chef_base'
-                sh 'berks vendor cookbooks' // build cookbook with all dependencies
+                sh 'cd cookbooks/chef_base; berks vendor cookbooks' // build cookbook with all dependencies
             }
         }
         stage('Local Tests') {
             steps {
                 echo 'Testing..'
-                sh 'chef exec rake style:ruby' // run rubocop
-                sh 'chef exec rake style:chef' // run foodcritic
-                sh 'chef exec rake unit' // run ChefSpec tests
+                sh 'cd cookbooks/chef_base; chef exec rake style:ruby' // run rubocop
+                sh 'cd cookbooks/chef_base; chef exec rake style:chef' // run foodcritic
+                sh 'cd cookbooks/chef_base; chef exec rake unit' // run ChefSpec tests
 
             }
             post {
@@ -46,7 +45,7 @@ pipeline {
            steps {
                 echo 'Integration...'
                 // run kitchen test with a concurrency of 2 at a time
-                sh 'chef exec rake integration'
+                sh 'cd cookbooks/chef_base; chef exec rake integration'
            }
             post {
               always {
