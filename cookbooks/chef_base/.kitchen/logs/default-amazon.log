@@ -1,0 +1,718 @@
+I, [2018-01-29T21:39:01.366908 #84283]  INFO -- default-amazon: -----> Creating <default-amazon>...
+I, [2018-01-29T21:39:02.812195 #84283]  INFO -- default-amazon: If you are not using an account that qualifies under the AWS
+free-tier, you may be charged to run these suites. The charge
+should be minimal, but neither Test Kitchen nor its maintainers
+are responsible for your incurred costs.
+
+I, [2018-01-29T21:39:04.246429 #84283]  INFO -- default-amazon: Instance <i-06b6a99924659c119> requested.
+I, [2018-01-29T21:39:04.246568 #84283]  INFO -- default-amazon: Polling AWS for existence, attempt 0...
+I, [2018-01-29T21:39:04.599742 #84283]  INFO -- default-amazon: Attempting to tag the instance, 0 retries
+I, [2018-01-29T21:39:04.811238 #84283]  INFO -- default-amazon: EC2 instance <i-06b6a99924659c119> created.
+I, [2018-01-29T21:39:04.811378 #84283]  INFO -- default-amazon: Waited 0/300s for instance <i-06b6a99924659c119> volumes to be ready.
+I, [2018-01-29T21:39:09.944454 #84283]  INFO -- default-amazon: Waited 0/300s for instance <i-06b6a99924659c119> to become ready.
+I, [2018-01-29T21:39:15.682151 #84283]  INFO -- default-amazon: Waited 5/300s for instance <i-06b6a99924659c119> to become ready.
+I, [2018-01-29T21:39:21.582160 #84283]  INFO -- default-amazon: Waited 10/300s for instance <i-06b6a99924659c119> to become ready.
+I, [2018-01-29T21:39:22.154889 #84283]  INFO -- default-amazon: EC2 instance <i-06b6a99924659c119> ready.
+I, [2018-01-29T21:39:37.258366 #84283]  INFO -- default-amazon: Waiting for SSH service on ec2-34-207-253-238.compute-1.amazonaws.com:22, retrying in 3 seconds
+I, [2018-01-29T21:39:55.268142 #84283]  INFO -- default-amazon: Waiting for SSH service on ec2-34-207-253-238.compute-1.amazonaws.com:22, retrying in 3 seconds
+I, [2018-01-29T21:40:13.283241 #84283]  INFO -- default-amazon: Waiting for SSH service on ec2-34-207-253-238.compute-1.amazonaws.com:22, retrying in 3 seconds
+I, [2018-01-29T21:40:31.298046 #84283]  INFO -- default-amazon: Waiting for SSH service on ec2-34-207-253-238.compute-1.amazonaws.com:22, retrying in 3 seconds
+I, [2018-01-29T21:40:39.177812 #84283]  INFO -- default-amazon: [SSH] Established
+I, [2018-01-29T21:40:39.483084 #84283]  INFO -- default-amazon: Finished creating <default-amazon> (1m38.11s).
+I, [2018-01-29T21:40:39.483604 #84283]  INFO -- default-amazon: -----> Converging <default-amazon>...
+I, [2018-01-29T21:40:39.485043 #84283]  INFO -- default-amazon: Preparing files for transfer
+I, [2018-01-29T21:40:39.485258 #84283]  INFO -- default-amazon: Preparing dna.json
+I, [2018-01-29T21:40:39.486440 #84283]  INFO -- default-amazon: Resolving cookbook dependencies with Berkshelf 6.3.1...
+I, [2018-01-29T21:40:39.808273 #84283]  INFO -- default-amazon: Removing non-cookbook files before transfer
+I, [2018-01-29T21:40:39.823609 #84283]  INFO -- default-amazon: Preparing validation.pem
+I, [2018-01-29T21:40:39.824624 #84283]  INFO -- default-amazon: Preparing client.rb
+I, [2018-01-29T21:40:40.629086 #84283]  INFO -- default-amazon: -----> Installing Chef Omnibus (install only if missing)
+I, [2018-01-29T21:40:40.629320 #84283]  INFO -- default-amazon: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2018-01-29T21:40:40.629426 #84283]  INFO -- default-amazon: Trying wget...
+I, [2018-01-29T21:40:40.691200 #84283]  INFO -- default-amazon: Download complete.
+I, [2018-01-29T21:40:40.704780 #84283]  INFO -- default-amazon: el 6 x86_64
+I, [2018-01-29T21:40:40.726144 #84283]  INFO -- default-amazon: Getting information for chef stable  for el...
+I, [2018-01-29T21:40:40.726305 #84283]  INFO -- default-amazon: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=6&m=x86_64
+I, [2018-01-29T21:40:40.726474 #84283]  INFO -- default-amazon:   to file /tmp/install.sh.2840/metadata.txt
+I, [2018-01-29T21:40:40.726560 #84283]  INFO -- default-amazon: trying wget...
+I, [2018-01-29T21:40:41.049377 #84283]  INFO -- default-amazon: sha1	3e9ee02bf311f1c4a6280eca019211f58b79da73
+I, [2018-01-29T21:40:41.049441 #84283]  INFO -- default-amazon: sha256	4aa242cf15dc0ac083c22c99b58027cea0faa52a0ee9895fe0ec9a07cd539f57
+I, [2018-01-29T21:40:41.049480 #84283]  INFO -- default-amazon: url	https://packages.chef.io/files/stable/chef/13.7.16/el/6/chef-13.7.16-1.el6.x86_64.rpm
+I, [2018-01-29T21:40:41.049639 #84283]  INFO -- default-amazon: version	13.7.16
+I, [2018-01-29T21:40:41.051219 #84283]  INFO -- default-amazon: downloaded metadata file looks valid...
+I, [2018-01-29T21:40:41.056341 #84283]  INFO -- default-amazon: downloading https://packages.chef.io/files/stable/chef/13.7.16/el/6/chef-13.7.16-1.el6.x86_64.rpm
+I, [2018-01-29T21:40:41.056544 #84283]  INFO -- default-amazon:   to file /tmp/install.sh.2840/chef-13.7.16-1.el6.x86_64.rpm
+I, [2018-01-29T21:40:41.056703 #84283]  INFO -- default-amazon: trying wget...
+I, [2018-01-29T21:40:41.645179 #84283]  INFO -- default-amazon: Comparing checksum with sha256sum...
+I, [2018-01-29T21:40:41.916764 #84283]  INFO -- default-amazon: 
+I, [2018-01-29T21:40:41.917172 #84283]  INFO -- default-amazon: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-01-29T21:40:41.917246 #84283]  INFO -- default-amazon: 
+I, [2018-01-29T21:40:41.917283 #84283]  INFO -- default-amazon: You are installing an omnibus package without a version pin.  If you are installing
+I, [2018-01-29T21:40:41.917626 #84283]  INFO -- default-amazon: on production servers via an automated process this is DANGEROUS and you will
+I, [2018-01-29T21:40:41.917664 #84283]  INFO -- default-amazon: be upgraded without warning on new releases, even to new major releases.
+I, [2018-01-29T21:40:41.917793 #84283]  INFO -- default-amazon: Letting the version float is only appropriate in desktop, test, development or
+I, [2018-01-29T21:40:41.917820 #84283]  INFO -- default-amazon: CI/CD environments.
+I, [2018-01-29T21:40:41.917838 #84283]  INFO -- default-amazon: 
+I, [2018-01-29T21:40:41.917946 #84283]  INFO -- default-amazon: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-01-29T21:40:41.917970 #84283]  INFO -- default-amazon: 
+I, [2018-01-29T21:40:41.918062 #84283]  INFO -- default-amazon: Installing chef 
+I, [2018-01-29T21:40:41.918142 #84283]  INFO -- default-amazon: installing with rpm...
+I, [2018-01-29T21:40:41.918272 #84283]  INFO -- default-amazon: warning: /tmp/install.sh.2840/chef-13.7.16-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2018-01-29T21:40:42.089962 #84283]  INFO -- default-amazon: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2018-01-29T21:40:42.105313 #84283]  INFO -- default-amazon: Updating / installing...
+I, [2018-01-29T21:40:47.282511 #84283]  INFO -- default-amazon:    1:chef-13.7.16-1.el6                                                 (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2018-01-29T21:40:47.372051 #84283]  INFO -- default-amazon: Thank you for installing Chef!
+I, [2018-01-29T21:40:47.713013 #84283]  INFO -- default-amazon: Transferring files to <default-amazon>
+I, [2018-01-29T21:42:23.758650 #84283]  INFO -- default-amazon: Starting Chef Client, version 13.7.16
+I, [2018-01-29T21:42:25.054676 #84283]  INFO -- default-amazon: Creating a new client identity for default-amazon using the validator key.
+I, [2018-01-29T21:42:25.137713 #84283]  INFO -- default-amazon: resolving cookbooks for run list: ["chef_base::default"]
+I, [2018-01-29T21:42:25.693149 #84283]  INFO -- default-amazon: Synchronizing Cookbooks:
+I, [2018-01-29T21:42:25.820514 #84283]  INFO -- default-amazon:   - chef_base (1.0.0)
+I, [2018-01-29T21:42:25.820722 #84283]  INFO -- default-amazon:   - docker (4.0.0)
+I, [2018-01-29T21:42:25.820988 #84283]  INFO -- default-amazon:   - chef-client (9.0.4)
+I, [2018-01-29T21:42:25.821221 #84283]  INFO -- default-amazon:   - cron (5.0.1)
+I, [2018-01-29T21:42:25.821343 #84283]  INFO -- default-amazon:   - logrotate (2.2.0)
+I, [2018-01-29T21:42:25.821426 #84283]  INFO -- default-amazon:   - windows (3.4.4)
+I, [2018-01-29T21:42:25.821528 #84283]  INFO -- default-amazon:   - ohai (5.2.1)
+I, [2018-01-29T21:42:25.821610 #84283]  INFO -- default-amazon: Installing Cookbook Gems:
+I, [2018-01-29T21:42:35.341120 #84283]  INFO -- default-amazon: Compiling Cookbooks...
+I, [2018-01-29T21:42:35.341345 #84283]  INFO -- default-amazon: Converging 17 resources
+I, [2018-01-29T21:42:35.341500 #84283]  INFO -- default-amazon: Recipe: chef-client::config
+I, [2018-01-29T21:42:35.404837 #84283]  INFO -- default-amazon:   * logrotate_app[chef-client] action enable
+I, [2018-01-29T21:42:35.405082 #84283]  INFO -- default-amazon:     * directory[/etc/logrotate.d] action create (up to date)
+I, [2018-01-29T21:42:35.405253 #84283]  INFO -- default-amazon:     * template[/etc/logrotate.d/chef-client] action create
+I, [2018-01-29T21:42:35.405418 #84283]  INFO -- default-amazon:       - create new file /etc/logrotate.d/chef-client
+I, [2018-01-29T21:42:35.405553 #84283]  INFO -- default-amazon:       - update content in file /etc/logrotate.d/chef-client from none to 10681f
+I, [2018-01-29T21:42:35.405737 #84283]  INFO -- default-amazon:       --- /etc/logrotate.d/chef-client	2018-01-30 05:42:34.779686000 +0000
+I, [2018-01-29T21:42:35.405892 #84283]  INFO -- default-amazon:       +++ /etc/logrotate.d/.chef-chef-client20180130-3001-1ko3t5c	2018-01-30 05:42:34.779686000 +0000
+I, [2018-01-29T21:42:35.497897 #84283]  INFO -- default-amazon:       @@ -1 +1,12 @@
+I, [2018-01-29T21:42:35.498069 #84283]  INFO -- default-amazon:       +# This file was generated by Chef for ip-172-31-53-131.ec2.internal.
+I, [2018-01-29T21:42:35.498277 #84283]  INFO -- default-amazon:       +# Do not modify this file by hand!
+I, [2018-01-29T21:42:35.498439 #84283]  INFO -- default-amazon:       +
+I, [2018-01-29T21:42:35.498648 #84283]  INFO -- default-amazon:       +"/var/log/chef/client.log" {
+I, [2018-01-29T21:42:35.498905 #84283]  INFO -- default-amazon:       +  weekly
+I, [2018-01-29T21:42:35.499069 #84283]  INFO -- default-amazon:       +  rotate 12
+I, [2018-01-29T21:42:35.499197 #84283]  INFO -- default-amazon:       +  compress
+I, [2018-01-29T21:42:35.499338 #84283]  INFO -- default-amazon:       +  postrotate
+I, [2018-01-29T21:42:35.499585 #84283]  INFO -- default-amazon:       +    /etc/init.d/chef-client reload >/dev/null || :
+I, [2018-01-29T21:42:35.499787 #84283]  INFO -- default-amazon:       +  endscript
+I, [2018-01-29T21:42:35.499910 #84283]  INFO -- default-amazon:       +}
+I, [2018-01-29T21:42:35.500020 #84283]  INFO -- default-amazon:       - change mode from '' to '0644'
+I, [2018-01-29T21:42:35.500132 #84283]  INFO -- default-amazon:       - change owner from '' to 'root'
+I, [2018-01-29T21:42:35.500263 #84283]  INFO -- default-amazon:       - change group from '' to 'root'
+I, [2018-01-29T21:42:35.500343 #84283]  INFO -- default-amazon:   
+I, [2018-01-29T21:42:35.500478 #84283]  INFO -- default-amazon:   * directory[/var/run/chef] action create
+I, [2018-01-29T21:42:35.500625 #84283]  INFO -- default-amazon:     - create new directory /var/run/chef
+I, [2018-01-29T21:42:36.615978 #84283]  INFO -- default-amazon:     - change owner from '' to 'root'
+I, [2018-01-29T21:42:36.616177 #84283]  INFO -- default-amazon:     - change group from '' to 'root'
+I, [2018-01-29T21:42:36.616357 #84283]  INFO -- default-amazon:   * directory[/var/cache/chef] action create
+I, [2018-01-29T21:42:36.616508 #84283]  INFO -- default-amazon:     - create new directory /var/cache/chef
+I, [2018-01-29T21:42:36.616623 #84283]  INFO -- default-amazon:     - change owner from '' to 'root'
+I, [2018-01-29T21:42:36.616763 #84283]  INFO -- default-amazon:     - change group from '' to 'root'
+I, [2018-01-29T21:42:36.616878 #84283]  INFO -- default-amazon:   * directory[/var/lib/chef] action create
+I, [2018-01-29T21:42:36.616991 #84283]  INFO -- default-amazon:     - create new directory /var/lib/chef
+I, [2018-01-29T21:42:36.643993 #84283]  INFO -- default-amazon:     - change owner from '' to 'root'
+I, [2018-01-29T21:42:36.644296 #84283]  INFO -- default-amazon:     - change group from '' to 'root'
+I, [2018-01-29T21:42:36.644478 #84283]  INFO -- default-amazon:   * directory[/var/log/chef] action create
+I, [2018-01-29T21:42:36.644835 #84283]  INFO -- default-amazon:     - create new directory /var/log/chef
+I, [2018-01-29T21:42:36.644989 #84283]  INFO -- default-amazon:     - change mode from '' to '0755'
+I, [2018-01-29T21:42:36.645114 #84283]  INFO -- default-amazon:     - change owner from '' to 'root'
+I, [2018-01-29T21:42:36.645264 #84283]  INFO -- default-amazon:     - change group from '' to 'root'
+I, [2018-01-29T21:42:36.645383 #84283]  INFO -- default-amazon:   * directory[/etc/chef] action create (up to date)
+I, [2018-01-29T21:42:36.645500 #84283]  INFO -- default-amazon:   * file[/var/log/chef/client.log] action create
+I, [2018-01-29T21:42:36.645641 #84283]  INFO -- default-amazon:     - create new file /var/log/chef/client.log
+I, [2018-01-29T21:42:36.645758 #84283]  INFO -- default-amazon:     - change mode from '' to '0640'
+I, [2018-01-29T21:42:36.645884 #84283]  INFO -- default-amazon:   * template[/etc/chef/client.rb] action create
+I, [2018-01-29T21:42:36.646024 #84283]  INFO -- default-amazon:     - create new file /etc/chef/client.rb
+I, [2018-01-29T21:42:36.646136 #84283]  INFO -- default-amazon:     - update content in file /etc/chef/client.rb from none to e42146
+I, [2018-01-29T21:42:36.646246 #84283]  INFO -- default-amazon:     --- /etc/chef/client.rb	2018-01-30 05:42:34.823686000 +0000
+I, [2018-01-29T21:42:36.646397 #84283]  INFO -- default-amazon:     +++ /etc/chef/.chef-client20180130-3001-oflq05.rb	2018-01-30 05:42:34.823686000 +0000
+I, [2018-01-29T21:42:36.676104 #84283]  INFO -- default-amazon:     @@ -1 +1,15 @@
+I, [2018-01-29T21:42:36.676389 #84283]  INFO -- default-amazon:     +chef_server_url "chefzero://localhost:1"
+I, [2018-01-29T21:42:36.676677 #84283]  INFO -- default-amazon:     +client_fork true
+I, [2018-01-29T21:42:36.676948 #84283]  INFO -- default-amazon:     +log_location "/var/log/chef/client.log"
+I, [2018-01-29T21:42:36.677212 #84283]  INFO -- default-amazon:     +validation_client_name "chef-validator"
+I, [2018-01-29T21:42:36.677470 #84283]  INFO -- default-amazon:     +verify_api_cert true
+I, [2018-01-29T21:42:36.677620 #84283]  INFO -- default-amazon:     +node_name "default-amazon"
+I, [2018-01-29T21:42:36.677775 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.677989 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.678153 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.678279 #84283]  INFO -- default-amazon:     +# Do not crash if a handler is missing / not installed yet
+I, [2018-01-29T21:42:36.678460 #84283]  INFO -- default-amazon:     +begin
+I, [2018-01-29T21:42:36.678581 #84283]  INFO -- default-amazon:     +rescue NameError => e
+I, [2018-01-29T21:42:36.678705 #84283]  INFO -- default-amazon:     +  Chef::Log.error e
+I, [2018-01-29T21:42:36.678920 #84283]  INFO -- default-amazon:     +end
+I, [2018-01-29T21:42:36.679057 #84283]  INFO -- default-amazon:     - change mode from '' to '0644'
+I, [2018-01-29T21:42:36.679178 #84283]  INFO -- default-amazon:     - change owner from '' to 'root'
+I, [2018-01-29T21:42:36.679396 #84283]  INFO -- default-amazon:     - change group from '' to 'root'
+I, [2018-01-29T21:42:36.737060 #84283]  INFO -- default-amazon:   * ruby_block[reload_client_config] action run
+I, [2018-01-29T21:42:36.737310 #84283]  INFO -- default-amazon:     - execute the ruby block reload_client_config
+I, [2018-01-29T21:42:36.737580 #84283]  INFO -- default-amazon:   * directory[/etc/chef/client.d] action create
+I, [2018-01-29T21:42:36.737719 #84283]  INFO -- default-amazon:     - create new directory /etc/chef/client.d
+I, [2018-01-29T21:42:36.737839 #84283]  INFO -- default-amazon:     - change mode from '' to '0755'
+I, [2018-01-29T21:42:36.737923 #84283]  INFO -- default-amazon:     - change owner from '' to 'root'
+I, [2018-01-29T21:42:36.738086 #84283]  INFO -- default-amazon:     - change group from '' to 'root'
+I, [2018-01-29T21:42:36.738211 #84283]  INFO -- default-amazon:   * ruby_block[reload_client_config] action nothing (skipped due to action :nothing)
+I, [2018-01-29T21:42:36.738295 #84283]  INFO -- default-amazon: Recipe: chef-client::init_service
+I, [2018-01-29T21:42:36.738458 #84283]  INFO -- default-amazon:   * template[/etc/init.d/chef-client] action create
+I, [2018-01-29T21:42:36.738576 #84283]  INFO -- default-amazon:     - create new file /etc/init.d/chef-client
+I, [2018-01-29T21:42:36.738792 #84283]  INFO -- default-amazon:     - update content in file /etc/init.d/chef-client from none to dbccac
+I, [2018-01-29T21:42:36.739031 #84283]  INFO -- default-amazon:     --- /etc/init.d/chef-client	2018-01-30 05:42:34.835686000 +0000
+I, [2018-01-29T21:42:36.739163 #84283]  INFO -- default-amazon:     +++ /etc/init.d/.chef-chef-client20180130-3001-1id0697	2018-01-30 05:42:34.835686000 +0000
+I, [2018-01-29T21:42:36.739284 #84283]  INFO -- default-amazon:     @@ -1 +1,110 @@
+I, [2018-01-29T21:42:36.739400 #84283]  INFO -- default-amazon:     +#!/bin/bash
+I, [2018-01-29T21:42:36.739780 #84283]  INFO -- default-amazon:     +#
+I, [2018-01-29T21:42:36.739897 #84283]  INFO -- default-amazon:     +# chef-client Startup script for the Chef client
+I, [2018-01-29T21:42:36.740110 #84283]  INFO -- default-amazon:     +#
+I, [2018-01-29T21:42:36.740193 #84283]  INFO -- default-amazon:     +# chkconfig: - 98 2
+I, [2018-01-29T21:42:36.740304 #84283]  INFO -- default-amazon:     +# description: Client component of the Chef systems integration framework.
+I, [2018-01-29T21:42:36.740386 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.740542 #84283]  INFO -- default-amazon:     +### BEGIN INIT INFO
+I, [2018-01-29T21:42:36.740656 #84283]  INFO -- default-amazon:     +# Provides: chef-client
+I, [2018-01-29T21:42:36.740769 #84283]  INFO -- default-amazon:     +# Required-Start: $local_fs $network $remote_fs
+I, [2018-01-29T21:42:36.740880 #84283]  INFO -- default-amazon:     +# Required-Stop: $local_fs $network $remote_fs
+I, [2018-01-29T21:42:36.741033 #84283]  INFO -- default-amazon:     +# Should-Start: $named $time
+I, [2018-01-29T21:42:36.741248 #84283]  INFO -- default-amazon:     +# Should-Stop: $named $time
+I, [2018-01-29T21:42:36.741388 #84283]  INFO -- default-amazon:     +# Short-Description: Startup script for the Chef client
+I, [2018-01-29T21:42:36.741557 #84283]  INFO -- default-amazon:     +# Description: Client component of the Chef systems integration framework.
+I, [2018-01-29T21:42:36.741672 #84283]  INFO -- default-amazon:     +### END INIT INFO
+I, [2018-01-29T21:42:36.741782 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.741978 #84283]  INFO -- default-amazon:     +# Source function library
+I, [2018-01-29T21:42:36.742092 #84283]  INFO -- default-amazon:     +. /etc/init.d/functions
+I, [2018-01-29T21:42:36.742172 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.742317 #84283]  INFO -- default-amazon:     +exec="/usr/bin/chef-client"
+I, [2018-01-29T21:42:36.742432 #84283]  INFO -- default-amazon:     +prog="chef-client"
+I, [2018-01-29T21:42:36.800166 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.800344 #84283]  INFO -- default-amazon:     +[ -e /etc/sysconfig/$prog ] && . /etc/sysconfig/$prog
+I, [2018-01-29T21:42:36.800524 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.800729 #84283]  INFO -- default-amazon:     +config=${CONFIG-/etc/chef/client.rb}
+I, [2018-01-29T21:42:36.800939 #84283]  INFO -- default-amazon:     +pidfile=${PIDFILE-/var/run/chef/client.pid}
+I, [2018-01-29T21:42:36.801112 #84283]  INFO -- default-amazon:     +lockfile=${LOCKFILE-/var/lock/subsys/$prog}
+I, [2018-01-29T21:42:36.801227 #84283]  INFO -- default-amazon:     +interval=${INTERVAL-1800}
+I, [2018-01-29T21:42:36.801341 #84283]  INFO -- default-amazon:     +splay=${SPLAY-20}
+I, [2018-01-29T21:42:36.801507 #84283]  INFO -- default-amazon:     +options=${OPTIONS-}
+I, [2018-01-29T21:42:36.801664 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.801782 #84283]  INFO -- default-amazon:     +start() {
+I, [2018-01-29T21:42:36.801897 #84283]  INFO -- default-amazon:     +    [ -x $exec ] || exit 5
+I, [2018-01-29T21:42:36.802031 #84283]  INFO -- default-amazon:     +    [ -f $config ] || exit 6
+I, [2018-01-29T21:42:36.802146 #84283]  INFO -- default-amazon:     +    echo -n $"Starting $prog: "
+I, [2018-01-29T21:42:36.802258 #84283]  INFO -- default-amazon:     +    daemon $exec -d -c "$config" -P "$pidfile" -i "$interval" -s "$splay" "$options"
+I, [2018-01-29T21:42:36.802481 #84283]  INFO -- default-amazon:     +    retval=$?
+I, [2018-01-29T21:42:36.802590 #84283]  INFO -- default-amazon:     +    echo
+I, [2018-01-29T21:42:36.802713 #84283]  INFO -- default-amazon:     +    [ $retval -eq 0 ] && touch $lockfile
+I, [2018-01-29T21:42:36.802828 #84283]  INFO -- default-amazon:     +    return $retval
+I, [2018-01-29T21:42:36.803180 #84283]  INFO -- default-amazon:     +}
+I, [2018-01-29T21:42:36.803384 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.803629 #84283]  INFO -- default-amazon:     +stop() {
+I, [2018-01-29T21:42:36.804533 #84283]  INFO -- default-amazon:     +    echo -n $"Stopping $prog: "
+I, [2018-01-29T21:42:36.804636 #84283]  INFO -- default-amazon:     +    killproc -p $pidfile $exec
+I, [2018-01-29T21:42:36.804758 #84283]  INFO -- default-amazon:     +    retval=$?
+I, [2018-01-29T21:42:36.805060 #84283]  INFO -- default-amazon:     +    echo
+I, [2018-01-29T21:42:36.805200 #84283]  INFO -- default-amazon:     +    [ $retval -eq 0 ] && rm -f $lockfile
+I, [2018-01-29T21:42:36.805318 #84283]  INFO -- default-amazon:     +    return $retval
+I, [2018-01-29T21:42:36.805431 #84283]  INFO -- default-amazon:     +}
+I, [2018-01-29T21:42:36.805563 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.805678 #84283]  INFO -- default-amazon:     +restart () {
+I, [2018-01-29T21:42:36.835048 #84283]  INFO -- default-amazon:     +    stop
+I, [2018-01-29T21:42:36.835400 #84283]  INFO -- default-amazon:     +    start
+I, [2018-01-29T21:42:36.835505 #84283]  INFO -- default-amazon:     +}
+I, [2018-01-29T21:42:36.835688 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.835786 #84283]  INFO -- default-amazon:     +reload() {
+I, [2018-01-29T21:42:36.835904 #84283]  INFO -- default-amazon:     +    echo -n $"Reloading $prog: "
+I, [2018-01-29T21:42:36.836154 #84283]  INFO -- default-amazon:     +    killproc -p $pidfile $exec -HUP
+I, [2018-01-29T21:42:36.836305 #84283]  INFO -- default-amazon:     +    retval=$?
+I, [2018-01-29T21:42:36.836441 #84283]  INFO -- default-amazon:     +    echo
+I, [2018-01-29T21:42:36.836649 #84283]  INFO -- default-amazon:     +    return $retval
+I, [2018-01-29T21:42:36.836767 #84283]  INFO -- default-amazon:     +}
+I, [2018-01-29T21:42:36.836878 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.837088 #84283]  INFO -- default-amazon:     +force_reload() {
+I, [2018-01-29T21:42:36.837205 #84283]  INFO -- default-amazon:     +    restart
+I, [2018-01-29T21:42:36.837312 #84283]  INFO -- default-amazon:     +}
+I, [2018-01-29T21:42:36.837410 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.837709 #84283]  INFO -- default-amazon:     +rh_status() {
+I, [2018-01-29T21:42:36.837881 #84283]  INFO -- default-amazon:     +    # run checks to determine if the service is running or use generic status
+I, [2018-01-29T21:42:36.838034 #84283]  INFO -- default-amazon:     +    status -p $pidfile $prog
+I, [2018-01-29T21:42:36.838293 #84283]  INFO -- default-amazon:     +}
+I, [2018-01-29T21:42:36.838413 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.838520 #84283]  INFO -- default-amazon:     +rh_status_q() {
+I, [2018-01-29T21:42:36.838683 #84283]  INFO -- default-amazon:     +    rh_status >/dev/null 2>&1
+I, [2018-01-29T21:42:36.838763 #84283]  INFO -- default-amazon:     +}
+I, [2018-01-29T21:42:36.838866 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.838941 #84283]  INFO -- default-amazon:     +case "$1" in
+I, [2018-01-29T21:42:36.839121 #84283]  INFO -- default-amazon:     +    start)
+I, [2018-01-29T21:42:36.839235 #84283]  INFO -- default-amazon:     +        rh_status_q && exit 0
+I, [2018-01-29T21:42:36.839343 #84283]  INFO -- default-amazon:     +        $1
+I, [2018-01-29T21:42:36.839447 #84283]  INFO -- default-amazon:     +        ;;
+I, [2018-01-29T21:42:36.839634 #84283]  INFO -- default-amazon:     +    stop)
+I, [2018-01-29T21:42:36.839741 #84283]  INFO -- default-amazon:     +        rh_status_q || exit 0
+I, [2018-01-29T21:42:36.839822 #84283]  INFO -- default-amazon:     +        $1
+I, [2018-01-29T21:42:36.839895 #84283]  INFO -- default-amazon:     +        ;;
+I, [2018-01-29T21:42:36.840093 #84283]  INFO -- default-amazon:     +    restart)
+I, [2018-01-29T21:42:36.840252 #84283]  INFO -- default-amazon:     +        $1
+I, [2018-01-29T21:42:36.840356 #84283]  INFO -- default-amazon:     +        ;;
+I, [2018-01-29T21:42:36.840585 #84283]  INFO -- default-amazon:     +    reload)
+I, [2018-01-29T21:42:36.840713 #84283]  INFO -- default-amazon:     +        rh_status_q || exit 7
+I, [2018-01-29T21:42:36.840827 #84283]  INFO -- default-amazon:     +        $1
+I, [2018-01-29T21:42:36.841008 #84283]  INFO -- default-amazon:     +        ;;
+I, [2018-01-29T21:42:36.841119 #84283]  INFO -- default-amazon:     +    force-reload)
+I, [2018-01-29T21:42:36.841225 #84283]  INFO -- default-amazon:     +        force_reload
+I, [2018-01-29T21:42:36.841305 #84283]  INFO -- default-amazon:     +        ;;
+I, [2018-01-29T21:42:36.841546 #84283]  INFO -- default-amazon:     +    status)
+I, [2018-01-29T21:42:36.841735 #84283]  INFO -- default-amazon:     +        rh_status
+I, [2018-01-29T21:42:36.900269 #84283]  INFO -- default-amazon:     +        ;;
+I, [2018-01-29T21:42:36.900510 #84283]  INFO -- default-amazon:     +    condrestart|try-restart)
+I, [2018-01-29T21:42:36.900635 #84283]  INFO -- default-amazon:     +        rh_status_q || exit 0
+I, [2018-01-29T21:42:36.900747 #84283]  INFO -- default-amazon:     +        restart
+I, [2018-01-29T21:42:36.900920 #84283]  INFO -- default-amazon:     +        ;;
+I, [2018-01-29T21:42:36.901027 #84283]  INFO -- default-amazon:     +    *)
+I, [2018-01-29T21:42:36.901135 #84283]  INFO -- default-amazon:     +        echo $"Usage: $0 {start|stop|status|restart|condrestart|try-restart|reload|force-reload}"
+I, [2018-01-29T21:42:36.901492 #84283]  INFO -- default-amazon:     +        exit 2
+I, [2018-01-29T21:42:36.901626 #84283]  INFO -- default-amazon:     +esac
+I, [2018-01-29T21:42:36.901733 #84283]  INFO -- default-amazon:     +exit $?
+I, [2018-01-29T21:42:36.901810 #84283]  INFO -- default-amazon:     - change mode from '' to '0755'
+I, [2018-01-29T21:42:36.902005 #84283]  INFO -- default-amazon:   * template[/etc/sysconfig/chef-client] action create
+I, [2018-01-29T21:42:36.902090 #84283]  INFO -- default-amazon:     - create new file /etc/sysconfig/chef-client
+I, [2018-01-29T21:42:36.902205 #84283]  INFO -- default-amazon:     - update content in file /etc/sysconfig/chef-client from none to ec7de1
+I, [2018-01-29T21:42:36.902313 #84283]  INFO -- default-amazon:     --- /etc/sysconfig/chef-client	2018-01-30 05:42:34.847686000 +0000
+I, [2018-01-29T21:42:36.902545 #84283]  INFO -- default-amazon:     +++ /etc/sysconfig/.chef-chef-client20180130-3001-s96feh	2018-01-30 05:42:34.847686000 +0000
+I, [2018-01-29T21:42:36.902649 #84283]  INFO -- default-amazon:     @@ -1 +1,15 @@
+I, [2018-01-29T21:42:36.902753 #84283]  INFO -- default-amazon:     +# Configuration file for the chef-client service
+I, [2018-01-29T21:42:36.903017 #84283]  INFO -- default-amazon:     +
+I, [2018-01-29T21:42:36.903280 #84283]  INFO -- default-amazon:     +CONFIG=/etc/chef/client.rb
+I, [2018-01-29T21:42:36.903426 #84283]  INFO -- default-amazon:     +PIDFILE=/var/run/chef/client.pid
+I, [2018-01-29T21:42:36.903763 #84283]  INFO -- default-amazon:     +#LOCKFILE=/var/lock/subsys/chef-client
+I, [2018-01-29T21:42:36.903918 #84283]  INFO -- default-amazon:     +# Sleep interval between runs.
+I, [2018-01-29T21:42:36.904000 #84283]  INFO -- default-amazon:     +# This value is in seconds.
+I, [2018-01-29T21:42:36.904106 #84283]  INFO -- default-amazon:     +INTERVAL=1800
+I, [2018-01-29T21:42:36.904255 #84283]  INFO -- default-amazon:     +# Maximum amount of random delay before starting a run. Prevents every client
+I, [2018-01-29T21:42:36.904363 #84283]  INFO -- default-amazon:     +# from contacting the server at the exact same time.
+I, [2018-01-29T21:42:36.904466 #84283]  INFO -- default-amazon:     +# This value is in seconds.
+I, [2018-01-29T21:42:36.904609 #84283]  INFO -- default-amazon:     +SPLAY=300
+I, [2018-01-29T21:42:36.904716 #84283]  INFO -- default-amazon:     +# Any additional chef-client options.
+I, [2018-01-29T21:42:36.904842 #84283]  INFO -- default-amazon:     +OPTIONS=""
+I, [2018-01-29T21:42:36.905012 #84283]  INFO -- default-amazon:     - change mode from '' to '0644'
+I, [2018-01-29T21:42:36.905116 #84283]  INFO -- default-amazon:   * service[chef-client] action enable
+I, [2018-01-29T21:42:36.905215 #84283]  INFO -- default-amazon:     - enable service service[chef-client]
+I, [2018-01-29T21:42:36.905379 #84283]  INFO -- default-amazon:   * service[chef-client] action start
+I, [2018-01-29T21:42:36.905481 #84283]  INFO -- default-amazon:     - start service service[chef-client]
+I, [2018-01-29T21:42:36.905566 #84283]  INFO -- default-amazon: Recipe: chef-client::delete_validation
+I, [2018-01-29T21:42:36.934871 #84283]  INFO -- default-amazon:   * file[/tmp/kitchen/validation.pem] action delete
+I, [2018-01-29T21:42:36.935030 #84283]  INFO -- default-amazon:     - delete file /tmp/kitchen/validation.pem
+I, [2018-01-29T21:42:36.935199 #84283]  INFO -- default-amazon: Recipe: chef_base::default
+I, [2018-01-29T21:42:36.935419 #84283]  INFO -- default-amazon:   * docker_service[default] action create
+I, [2018-01-29T21:42:36.935515 #84283]  INFO -- default-amazon:     * docker_installation_package[default] action create
+I, [2018-01-29T21:42:43.643863 #84283]  INFO -- default-amazon:       * yum_package[docker] action install
+I, [2018-01-29T21:42:43.643989 #84283]  INFO -- default-amazon:  - install version 17.09.1ce-1.111.amzn1 of package docker
+I, [2018-01-29T21:42:43.644021 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.644210 #84283]  INFO -- default-amazon:     * docker_service[default] action restart
+I, [2018-01-29T21:42:43.774404 #84283]  INFO -- default-amazon:       * docker_service_manager_sysvinit_rhel[default] action restart
+I, [2018-01-29T21:42:43.809014 #84283]  INFO -- default-amazon:  * execute[groupadd docker] action run (skipped due to not_if)
+I, [2018-01-29T21:42:43.809122 #84283]  INFO -- default-amazon:  * link[/usr/bin/dockerd-default] action create
+I, [2018-01-29T21:42:43.809171 #84283]  INFO -- default-amazon:    - create hard link at /usr/bin/dockerd-default to /usr/bin/dockerd
+I, [2018-01-29T21:42:43.819155 #84283]  INFO -- default-amazon:  * template[/etc/init.d/docker] action create
+I, [2018-01-29T21:42:43.819525 #84283]  INFO -- default-amazon:    - update content in file /etc/init.d/docker from e38d78 to 842226
+I, [2018-01-29T21:42:43.868822 #84283]  INFO -- default-amazon:    --- /etc/init.d/docker	2018-01-08 22:44:09.000000000 +0000
+I, [2018-01-29T21:42:43.869122 #84283]  INFO -- default-amazon:    +++ /etc/init.d/.chef-docker20180130-3001-16xhya4	2018-01-30 05:42:43.739686000 +0000
+I, [2018-01-29T21:42:43.869407 #84283]  INFO -- default-amazon:    @@ -4,7 +4,7 @@
+I, [2018-01-29T21:42:43.869589 #84283]  INFO -- default-amazon:     #
+I, [2018-01-29T21:42:43.869809 #84283]  INFO -- default-amazon:     #       Daemon for docker.com
+I, [2018-01-29T21:42:43.869968 #84283]  INFO -- default-amazon:     #
+I, [2018-01-29T21:42:43.870204 #84283]  INFO -- default-amazon:    -# chkconfig:   2345 95 05
+I, [2018-01-29T21:42:43.870368 #84283]  INFO -- default-amazon:    +# chkconfig:   2345 95 95
+I, [2018-01-29T21:42:43.870594 #84283]  INFO -- default-amazon:     # description: Daemon for docker.com
+I, [2018-01-29T21:42:43.870774 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.871027 #84283]  INFO -- default-amazon:     ### BEGIN INIT INFO
+I, [2018-01-29T21:42:43.871376 #84283]  INFO -- default-amazon:    @@ -22,144 +22,112 @@
+I, [2018-01-29T21:42:43.871553 #84283]  INFO -- default-amazon:     # Source function library.
+I, [2018-01-29T21:42:43.871916 #84283]  INFO -- default-amazon:     . /etc/rc.d/init.d/functions
+I, [2018-01-29T21:42:43.872231 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.872582 #84283]  INFO -- default-amazon:    -prog="docker"
+I, [2018-01-29T21:42:43.872765 #84283]  INFO -- default-amazon:    +prog="/usr/bin/dockerd-default"
+I, [2018-01-29T21:42:43.873144 #84283]  INFO -- default-amazon:    +instance=docker
+I, [2018-01-29T21:42:43.873303 #84283]  INFO -- default-amazon:     unshare=/usr/bin/unshare
+I, [2018-01-29T21:42:43.873495 #84283]  INFO -- default-amazon:    -exec="/usr/bin/dockerd"
+I, [2018-01-29T21:42:43.873643 #84283]  INFO -- default-amazon:    -pidfile="/var/run/$prog.pid"
+I, [2018-01-29T21:42:43.873843 #84283]  INFO -- default-amazon:    -lockfile="/var/lock/subsys/$prog"
+I, [2018-01-29T21:42:43.873987 #84283]  INFO -- default-amazon:    -logfile="/var/log/$prog"
+I, [2018-01-29T21:42:43.874127 #84283]  INFO -- default-amazon:    +exec="$prog"
+I, [2018-01-29T21:42:43.874331 #84283]  INFO -- default-amazon:    +pidfile="/var/run/$instance.pid"
+I, [2018-01-29T21:42:43.874476 #84283]  INFO -- default-amazon:    +lockfile="/var/lock/subsys/$instance"
+I, [2018-01-29T21:42:43.874714 #84283]  INFO -- default-amazon:    +logfile="/var/log/$instance"
+I, [2018-01-29T21:42:43.874860 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.875099 #84283]  INFO -- default-amazon:    -[ -e /etc/sysconfig/$prog ] && . /etc/sysconfig/$prog
+I, [2018-01-29T21:42:43.875250 #84283]  INFO -- default-amazon:    -[ -e /etc/sysconfig/${prog}-storage ] && . /etc/sysconfig/${prog}-storage
+I, [2018-01-29T21:42:43.875420 #84283]  INFO -- default-amazon:    +[ -e /etc/sysconfig/$instance ] && . /etc/sysconfig/$instance
+I, [2018-01-29T21:42:43.875562 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.875780 #84283]  INFO -- default-amazon:    -[ -n "${DAEMON_MAXFILES}" ] && ulimit -n "${DAEMON_MAXFILES}"
+I, [2018-01-29T21:42:43.875923 #84283]  INFO -- default-amazon:    -
+I, [2018-01-29T21:42:43.912026 #84283]  INFO -- default-amazon:    -# Additional start options for the Docker daemon can
+I, [2018-01-29T21:42:43.912244 #84283]  INFO -- default-amazon:    -# be defined in the $OPTIONS variable in /etc/sysconfig/docker,
+I, [2018-01-29T21:42:43.913189 #84283]  INFO -- default-amazon:    -# which is also the variable name referenced by the systemd unit.
+I, [2018-01-29T21:42:43.913390 #84283]  INFO -- default-amazon:    -# If $OPTIONS is not defined, we set it to the value of $other_args,
+I, [2018-01-29T21:42:43.913638 #84283]  INFO -- default-amazon:    -# which is the variable name expected by the upstream sysvinit script.
+I, [2018-01-29T21:42:43.925868 #84283]  INFO -- default-amazon:    -OPTIONS="${OPTIONS:-${other_args}}"
+I, [2018-01-29T21:42:43.926257 #84283]  INFO -- default-amazon:    -
+I, [2018-01-29T21:42:43.926554 #84283]  INFO -- default-amazon:    -# How many seconds to wait for the pidfile to appear after starting the daemon.
+I, [2018-01-29T21:42:43.926744 #84283]  INFO -- default-amazon:    -# The default value from upstream is 10.
+I, [2018-01-29T21:42:43.926948 #84283]  INFO -- default-amazon:    -DAEMON_PIDFILE_TIMEOUT="${DAEMON_PIDFILE_TIMEOUT:-10}"
+I, [2018-01-29T21:42:43.927135 #84283]  INFO -- default-amazon:    -
+I, [2018-01-29T21:42:43.927353 #84283]  INFO -- default-amazon:     prestart() {
+I, [2018-01-29T21:42:43.929602 #84283]  INFO -- default-amazon:    -	service cgconfig status > /dev/null
+I, [2018-01-29T21:42:43.929945 #84283]  INFO -- default-amazon:    +    service cgconfig status > /dev/null
+I, [2018-01-29T21:42:43.930131 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.930295 #84283]  INFO -- default-amazon:    -	if [[ $? != 0 ]]; then
+I, [2018-01-29T21:42:43.930524 #84283]  INFO -- default-amazon:    -		service cgconfig start
+I, [2018-01-29T21:42:43.930728 #84283]  INFO -- default-amazon:    -	fi
+I, [2018-01-29T21:42:43.930880 #84283]  INFO -- default-amazon:    +    if [[ $? != 0 ]]; then
+I, [2018-01-29T21:42:43.931094 #84283]  INFO -- default-amazon:    +        service cgconfig start
+I, [2018-01-29T21:42:43.931240 #84283]  INFO -- default-amazon:    +    fi
+I, [2018-01-29T21:42:43.931417 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.931562 #84283]  INFO -- default-amazon:     }
+I, [2018-01-29T21:42:43.931771 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.931915 #84283]  INFO -- default-amazon:     start() {
+I, [2018-01-29T21:42:43.932127 #84283]  INFO -- default-amazon:    -	if [ ! -x $exec ]; then
+I, [2018-01-29T21:42:43.936644 #84283]  INFO -- default-amazon:    -		if [ ! -e $exec ]; then
+I, [2018-01-29T21:42:43.936901 #84283]  INFO -- default-amazon:    -			echo "Docker executable $exec not found"
+I, [2018-01-29T21:42:43.937096 #84283]  INFO -- default-amazon:    -		else
+I, [2018-01-29T21:42:43.937391 #84283]  INFO -- default-amazon:    -			echo "You do not have permission to execute the Docker executable $exec"
+I, [2018-01-29T21:42:43.937565 #84283]  INFO -- default-amazon:    -		fi
+I, [2018-01-29T21:42:43.937796 #84283]  INFO -- default-amazon:    -		exit 5
+I, [2018-01-29T21:42:43.937944 #84283]  INFO -- default-amazon:    -	fi
+I, [2018-01-29T21:42:43.938194 #84283]  INFO -- default-amazon:    +    [ -x $exec ] || exit 5
+I, [2018-01-29T21:42:43.938342 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.938542 #84283]  INFO -- default-amazon:    -	check_for_cleanup
+I, [2018-01-29T21:42:43.938692 #84283]  INFO -- default-amazon:    +    check_for_cleanup
+I, [2018-01-29T21:42:43.938888 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.939033 #84283]  INFO -- default-amazon:    -	if ! [ -f $pidfile ]; then
+I, [2018-01-29T21:42:43.939244 #84283]  INFO -- default-amazon:    -		prestart
+I, [2018-01-29T21:42:43.939444 #84283]  INFO -- default-amazon:    -		printf "Starting $prog:\t"
+I, [2018-01-29T21:42:43.939687 #84283]  INFO -- default-amazon:    -		echo "\n$(date)\n" >> $logfile
+I, [2018-01-29T21:42:43.939876 #84283]  INFO -- default-amazon:    -		nohup $exec ${OPTIONS} ${DOCKER_STORAGE_OPTIONS} >> $logfile 2>&1 &
+I, [2018-01-29T21:42:43.940027 #84283]  INFO -- default-amazon:    -		pid=$!
+I, [2018-01-29T21:42:43.940170 #84283]  INFO -- default-amazon:    -		touch $lockfile
+I, [2018-01-29T21:42:43.940367 #84283]  INFO -- default-amazon:    -		tries=0
+I, [2018-01-29T21:42:43.940574 #84283]  INFO -- default-amazon:    -		while [ ! -f $pidfile -a $tries -lt ${DAEMON_PIDFILE_TIMEOUT} ]; do
+I, [2018-01-29T21:42:43.942334 #84283]  INFO -- default-amazon:    -			sleep 1
+I, [2018-01-29T21:42:43.942655 #84283]  INFO -- default-amazon:    -			tries=$((tries + 1))
+I, [2018-01-29T21:42:43.942820 #84283]  INFO -- default-amazon:    -			echo -n '.'
+I, [2018-01-29T21:42:43.943001 #84283]  INFO -- default-amazon:    -		done
+I, [2018-01-29T21:42:43.947869 #84283]  INFO -- default-amazon:    -		if [ ! -f $pidfile ]; then
+I, [2018-01-29T21:42:43.948315 #84283]  INFO -- default-amazon:    -			failure
+I, [2018-01-29T21:42:43.948502 #84283]  INFO -- default-amazon:    -			echo
+I, [2018-01-29T21:42:43.990567 #84283]  INFO -- default-amazon:    -			exit 1
+I, [2018-01-29T21:42:43.990804 #84283]  INFO -- default-amazon:    -		fi
+I, [2018-01-29T21:42:43.990958 #84283]  INFO -- default-amazon:    -		success
+I, [2018-01-29T21:42:43.991152 #84283]  INFO -- default-amazon:    -		echo
+I, [2018-01-29T21:42:43.991312 #84283]  INFO -- default-amazon:    -	else
+I, [2018-01-29T21:42:43.991497 #84283]  INFO -- default-amazon:    -		failure
+I, [2018-01-29T21:42:43.991638 #84283]  INFO -- default-amazon:    -		echo
+I, [2018-01-29T21:42:43.991828 #84283]  INFO -- default-amazon:    -		printf "$pidfile still exists...\n"
+I, [2018-01-29T21:42:43.992060 #84283]  INFO -- default-amazon:    -		exit 7
+I, [2018-01-29T21:42:43.992338 #84283]  INFO -- default-amazon:    -	fi
+I, [2018-01-29T21:42:43.992494 #84283]  INFO -- default-amazon:    +    if ! [ -f $pidfile ]; then
+I, [2018-01-29T21:42:43.992699 #84283]  INFO -- default-amazon:    +        prestart
+I, [2018-01-29T21:42:43.992847 #84283]  INFO -- default-amazon:    +        printf "Starting $prog:\t"
+I, [2018-01-29T21:42:43.993035 #84283]  INFO -- default-amazon:    +        echo "\n$(date)\n" >> $logfile
+I, [2018-01-29T21:42:43.993225 #84283]  INFO -- default-amazon:    +        "$unshare" -m -- /usr/bin/dockerd  --group=docker --pidfile=/var/run/docker.pid &>> $logfile &
+I, [2018-01-29T21:42:43.993422 #84283]  INFO -- default-amazon:    +        /usr/lib/docker/docker-wait-ready
+I, [2018-01-29T21:42:43.993566 #84283]  INFO -- default-amazon:    +        [ $? -eq 0 ] && success || failure
+I, [2018-01-29T21:42:43.993753 #84283]  INFO -- default-amazon:    +        echo
+I, [2018-01-29T21:42:43.993960 #84283]  INFO -- default-amazon:    +    else
+I, [2018-01-29T21:42:43.994184 #84283]  INFO -- default-amazon:    +        failure
+I, [2018-01-29T21:42:43.994324 #84283]  INFO -- default-amazon:    +        echo
+I, [2018-01-29T21:42:43.994510 #84283]  INFO -- default-amazon:    +        printf "$pidfile still exists...\n"
+I, [2018-01-29T21:42:43.994648 #84283]  INFO -- default-amazon:    +        exit 7
+I, [2018-01-29T21:42:43.994841 #84283]  INFO -- default-amazon:    +    fi
+I, [2018-01-29T21:42:43.994978 #84283]  INFO -- default-amazon:     }
+I, [2018-01-29T21:42:43.995144 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:43.995278 #84283]  INFO -- default-amazon:     stop() {
+I, [2018-01-29T21:42:43.995468 #84283]  INFO -- default-amazon:    -	echo -n $"Stopping $prog: "
+I, [2018-01-29T21:42:43.995607 #84283]  INFO -- default-amazon:    -	killproc -p $pidfile -d 300 $prog
+I, [2018-01-29T21:42:43.995807 #84283]  INFO -- default-amazon:    -	retval=$?
+I, [2018-01-29T21:42:43.995943 #84283]  INFO -- default-amazon:    -	echo
+I, [2018-01-29T21:42:43.996148 #84283]  INFO -- default-amazon:    -	[ $retval -eq 0 ] && rm -f $lockfile
+I, [2018-01-29T21:42:43.996290 #84283]  INFO -- default-amazon:    -	return $retval
+I, [2018-01-29T21:42:43.996466 #84283]  INFO -- default-amazon:    +    echo -n $"Stopping $prog: "
+I, [2018-01-29T21:42:43.996602 #84283]  INFO -- default-amazon:    +    killproc -p $pidfile -d 300 $prog
+I, [2018-01-29T21:42:43.996834 #84283]  INFO -- default-amazon:    +    retval=$?
+I, [2018-01-29T21:42:43.996974 #84283]  INFO -- default-amazon:    +    echo
+I, [2018-01-29T21:42:43.997141 #84283]  INFO -- default-amazon:    +    [ $retval -eq 0 ] && rm -f $lockfile
+I, [2018-01-29T21:42:43.997277 #84283]  INFO -- default-amazon:    +    return $retval
+I, [2018-01-29T21:42:43.997462 #84283]  INFO -- default-amazon:     }
+I, [2018-01-29T21:42:44.002467 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.002783 #84283]  INFO -- default-amazon:     restart() {
+I, [2018-01-29T21:42:44.017138 #84283]  INFO -- default-amazon:    -	stop
+I, [2018-01-29T21:42:44.017447 #84283]  INFO -- default-amazon:    -	start
+I, [2018-01-29T21:42:44.017679 #84283]  INFO -- default-amazon:    +    stop
+I, [2018-01-29T21:42:44.017913 #84283]  INFO -- default-amazon:    +    start
+I, [2018-01-29T21:42:44.018079 #84283]  INFO -- default-amazon:     }
+I, [2018-01-29T21:42:44.018290 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.018439 #84283]  INFO -- default-amazon:     reload() {
+I, [2018-01-29T21:42:44.018648 #84283]  INFO -- default-amazon:    -	restart
+I, [2018-01-29T21:42:44.018796 #84283]  INFO -- default-amazon:    +    restart
+I, [2018-01-29T21:42:44.019065 #84283]  INFO -- default-amazon:     }
+I, [2018-01-29T21:42:44.019232 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.019460 #84283]  INFO -- default-amazon:     force_reload() {
+I, [2018-01-29T21:42:44.019709 #84283]  INFO -- default-amazon:    -	restart
+I, [2018-01-29T21:42:44.019871 #84283]  INFO -- default-amazon:    +    restart
+I, [2018-01-29T21:42:44.020074 #84283]  INFO -- default-amazon:     }
+I, [2018-01-29T21:42:44.022894 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.023142 #84283]  INFO -- default-amazon:     rh_status() {
+I, [2018-01-29T21:42:44.023300 #84283]  INFO -- default-amazon:    -	status -p $pidfile $prog
+I, [2018-01-29T21:42:44.023489 #84283]  INFO -- default-amazon:    +    status -p $pidfile $prog
+I, [2018-01-29T21:42:44.023636 #84283]  INFO -- default-amazon:     }
+I, [2018-01-29T21:42:44.023833 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.023980 #84283]  INFO -- default-amazon:     rh_status_q() {
+I, [2018-01-29T21:42:44.024210 #84283]  INFO -- default-amazon:    -	rh_status >/dev/null 2>&1
+I, [2018-01-29T21:42:44.024360 #84283]  INFO -- default-amazon:    +    rh_status >/dev/null 2>&1
+I, [2018-01-29T21:42:44.024559 #84283]  INFO -- default-amazon:     }
+I, [2018-01-29T21:42:44.024700 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.024907 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.025049 #84283]  INFO -- default-amazon:     check_for_cleanup() {
+I, [2018-01-29T21:42:44.025222 #84283]  INFO -- default-amazon:    -	if [ -f ${pidfile} ]; then
+I, [2018-01-29T21:42:44.029626 #84283]  INFO -- default-amazon:    -		/bin/ps -fp $(cat ${pidfile}) > /dev/null || rm ${pidfile}
+I, [2018-01-29T21:42:44.029833 #84283]  INFO -- default-amazon:    -	fi
+I, [2018-01-29T21:42:44.030035 #84283]  INFO -- default-amazon:    +    if [ -f ${pidfile} ]; then
+I, [2018-01-29T21:42:44.030187 #84283]  INFO -- default-amazon:    +        /bin/ps -fp $(cat ${pidfile}) > /dev/null || rm ${pidfile}
+I, [2018-01-29T21:42:44.030447 #84283]  INFO -- default-amazon:    +    fi
+I, [2018-01-29T21:42:44.030619 #84283]  INFO -- default-amazon:     }
+I, [2018-01-29T21:42:44.030761 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.030996 #84283]  INFO -- default-amazon:     case "$1" in
+I, [2018-01-29T21:42:44.031394 #84283]  INFO -- default-amazon:    -	start)
+I, [2018-01-29T21:42:44.031574 #84283]  INFO -- default-amazon:    -		rh_status_q && exit 0
+I, [2018-01-29T21:42:44.031782 #84283]  INFO -- default-amazon:    -		$1
+I, [2018-01-29T21:42:44.031922 #84283]  INFO -- default-amazon:    -		;;
+I, [2018-01-29T21:42:44.032202 #84283]  INFO -- default-amazon:    -	stop)
+I, [2018-01-29T21:42:44.032374 #84283]  INFO -- default-amazon:    -		rh_status_q || exit 0
+I, [2018-01-29T21:42:44.032560 #84283]  INFO -- default-amazon:    -		$1
+I, [2018-01-29T21:42:44.032695 #84283]  INFO -- default-amazon:    -		;;
+I, [2018-01-29T21:42:44.032876 #84283]  INFO -- default-amazon:    -	restart)
+I, [2018-01-29T21:42:44.033009 #84283]  INFO -- default-amazon:    -		$1
+I, [2018-01-29T21:42:44.033196 #84283]  INFO -- default-amazon:    -		;;
+I, [2018-01-29T21:42:44.033329 #84283]  INFO -- default-amazon:    -	reload)
+I, [2018-01-29T21:42:44.033557 #84283]  INFO -- default-amazon:    -		rh_status_q || exit 7
+I, [2018-01-29T21:42:44.033743 #84283]  INFO -- default-amazon:    -		$1
+I, [2018-01-29T21:42:44.035749 #84283]  INFO -- default-amazon:    -		;;
+I, [2018-01-29T21:42:44.035899 #84283]  INFO -- default-amazon:    -	force-reload)
+I, [2018-01-29T21:42:44.036110 #84283]  INFO -- default-amazon:    -		force_reload
+I, [2018-01-29T21:42:44.036238 #84283]  INFO -- default-amazon:    -		;;
+I, [2018-01-29T21:42:44.036466 #84283]  INFO -- default-amazon:    -	status)
+I, [2018-01-29T21:42:44.036616 #84283]  INFO -- default-amazon:    -		rh_status
+I, [2018-01-29T21:42:44.036831 #84283]  INFO -- default-amazon:    -		;;
+I, [2018-01-29T21:42:44.037008 #84283]  INFO -- default-amazon:    -	condrestart|try-restart)
+I, [2018-01-29T21:42:44.110296 #84283]  INFO -- default-amazon:    -		rh_status_q || exit 0
+I, [2018-01-29T21:42:44.110365 #84283]  INFO -- default-amazon:    -		restart
+I, [2018-01-29T21:42:44.110394 #84283]  INFO -- default-amazon:    -		;;
+I, [2018-01-29T21:42:44.110416 #84283]  INFO -- default-amazon:    -	*)
+I, [2018-01-29T21:42:44.110438 #84283]  INFO -- default-amazon:    -		echo $"Usage: $0 {start|stop|status|restart|condrestart|try-restart|reload|force-reload}"
+I, [2018-01-29T21:42:44.110464 #84283]  INFO -- default-amazon:    -		exit 2
+I, [2018-01-29T21:42:44.110486 #84283]  INFO -- default-amazon:    +    start)
+I, [2018-01-29T21:42:44.110507 #84283]  INFO -- default-amazon:    +        rh_status_q && exit 0
+I, [2018-01-29T21:42:44.110527 #84283]  INFO -- default-amazon:    +        $1
+I, [2018-01-29T21:42:44.110546 #84283]  INFO -- default-amazon:    +        ;;
+I, [2018-01-29T21:42:44.110565 #84283]  INFO -- default-amazon:    +    stop)
+I, [2018-01-29T21:42:44.110585 #84283]  INFO -- default-amazon:    +        rh_status_q || exit 0
+I, [2018-01-29T21:42:44.110608 #84283]  INFO -- default-amazon:    +        $1
+I, [2018-01-29T21:42:44.110628 #84283]  INFO -- default-amazon:    +        ;;
+I, [2018-01-29T21:42:44.110648 #84283]  INFO -- default-amazon:    +    restart)
+I, [2018-01-29T21:42:44.110713 #84283]  INFO -- default-amazon:    +        $1
+I, [2018-01-29T21:42:44.110733 #84283]  INFO -- default-amazon:    +        ;;
+I, [2018-01-29T21:42:44.110752 #84283]  INFO -- default-amazon:    +    reload)
+I, [2018-01-29T21:42:44.110772 #84283]  INFO -- default-amazon:    +        rh_status_q || exit 7
+I, [2018-01-29T21:42:44.110791 #84283]  INFO -- default-amazon:    +        $1
+I, [2018-01-29T21:42:44.110810 #84283]  INFO -- default-amazon:    +        ;;
+I, [2018-01-29T21:42:44.110829 #84283]  INFO -- default-amazon:    +    force-reload)
+I, [2018-01-29T21:42:44.110849 #84283]  INFO -- default-amazon:    +        force_reload
+I, [2018-01-29T21:42:44.110867 #84283]  INFO -- default-amazon:    +        ;;
+I, [2018-01-29T21:42:44.110886 #84283]  INFO -- default-amazon:    +    status)
+I, [2018-01-29T21:42:44.110905 #84283]  INFO -- default-amazon:    +        rh_status
+I, [2018-01-29T21:42:44.110924 #84283]  INFO -- default-amazon:    +        ;;
+I, [2018-01-29T21:42:44.110943 #84283]  INFO -- default-amazon:    +    condrestart|try-restart)
+I, [2018-01-29T21:42:44.110963 #84283]  INFO -- default-amazon:    +        rh_status_q || exit 0
+I, [2018-01-29T21:42:44.110982 #84283]  INFO -- default-amazon:    +        restart
+I, [2018-01-29T21:42:44.111001 #84283]  INFO -- default-amazon:    +        ;;
+I, [2018-01-29T21:42:44.111019 #84283]  INFO -- default-amazon:    +    *)
+I, [2018-01-29T21:42:44.111039 #84283]  INFO -- default-amazon:    +        echo $"Usage: $0 {start|stop|status|restart|condrestart|try-restart|reload|force-reload}"
+I, [2018-01-29T21:42:44.111059 #84283]  INFO -- default-amazon:    +        exit 2
+I, [2018-01-29T21:42:44.111078 #84283]  INFO -- default-amazon:     esac
+I, [2018-01-29T21:42:44.111096 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.111115 #84283]  INFO -- default-amazon:     exit $?
+I, [2018-01-29T21:42:44.111827 #84283]  INFO -- default-amazon:  * service[docker] action restart
+I, [2018-01-29T21:42:44.111860 #84283]  INFO -- default-amazon:    - restart service service[docker]
+I, [2018-01-29T21:42:44.111973 #84283]  INFO -- default-amazon:  * template[/etc/sysconfig/docker] action create
+I, [2018-01-29T21:42:44.112138 #84283]  INFO -- default-amazon:    - update content in file /etc/sysconfig/docker from 1b6dfa to a6e214
+I, [2018-01-29T21:42:44.112373 #84283]  INFO -- default-amazon:    --- /etc/sysconfig/docker	2018-01-08 22:42:22.000000000 +0000
+I, [2018-01-29T21:42:44.112543 #84283]  INFO -- default-amazon:    +++ /etc/sysconfig/.chef-docker20180130-3001-5se7gf	2018-01-30 05:42:43.983686000 +0000
+I, [2018-01-29T21:42:44.112837 #84283]  INFO -- default-amazon:    @@ -1,14 +1,5 @@
+I, [2018-01-29T21:42:44.113020 #84283]  INFO -- default-amazon:    -# The max number of open files for the daemon itself, and all
+I, [2018-01-29T21:42:44.113260 #84283]  INFO -- default-amazon:    -# running containers.  The default value of 1048576 mirrors the value
+I, [2018-01-29T21:42:44.113419 #84283]  INFO -- default-amazon:    -# used by the systemd service unit.
+I, [2018-01-29T21:42:44.113640 #84283]  INFO -- default-amazon:    -DAEMON_MAXFILES=1048576
+I, [2018-01-29T21:42:44.113793 #84283]  INFO -- default-amazon:    +# /etc/sysconfig/docker
+I, [2018-01-29T21:42:44.114006 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.114161 #84283]  INFO -- default-amazon:    -# Additional startup options for the Docker daemon, for example:
+I, [2018-01-29T21:42:44.114316 #84283]  INFO -- default-amazon:    -# OPTIONS="--ip-forward=true --iptables=true"
+I, [2018-01-29T21:42:44.114542 #84283]  INFO -- default-amazon:    -# By default we limit the number of open files per container
+I, [2018-01-29T21:42:44.114770 #84283]  INFO -- default-amazon:    -OPTIONS="--default-ulimit nofile=1024:4096"
+I, [2018-01-29T21:42:44.114929 #84283]  INFO -- default-amazon:    +# If you need Docker to use an HTTP proxy, it can also be specified here.
+I, [2018-01-29T21:42:44.115169 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:44.115421 #84283]  INFO -- default-amazon:    -# How many seconds the sysvinit script waits for the pidfile to appear
+I, [2018-01-29T21:42:44.115642 #84283]  INFO -- default-amazon:    -# when starting the daemon.
+I, [2018-01-29T21:42:44.115800 #84283]  INFO -- default-amazon:    -DAEMON_PIDFILE_TIMEOUT=10
+I, [2018-01-29T21:42:44.297967 #84283]  INFO -- default-amazon:  * service[docker] action restart
+I, [2018-01-29T21:42:44.298116 #84283]  INFO -- default-amazon:    - restart service service[docker]
+I, [2018-01-29T21:42:45.009885 #84283]  INFO -- default-amazon:  * service[docker] action stop
+I, [2018-01-29T21:42:45.009965 #84283]  INFO -- default-amazon:    - stop service service[docker]
+I, [2018-01-29T21:42:45.010368 #84283]  INFO -- default-amazon:  * directory[/usr/lib/docker] action create
+I, [2018-01-29T21:42:45.035647 #84283]  INFO -- default-amazon:    - create new directory /usr/lib/docker
+I, [2018-01-29T21:42:45.041260 #84283]  INFO -- default-amazon:    - change mode from '' to '0755'
+I, [2018-01-29T21:42:45.041743 #84283]  INFO -- default-amazon:    - change owner from '' to 'root'
+I, [2018-01-29T21:42:45.041974 #84283]  INFO -- default-amazon:    - change group from '' to 'root'
+I, [2018-01-29T21:42:45.042212 #84283]  INFO -- default-amazon:  * template[/usr/lib/docker/docker-wait-ready] action create
+I, [2018-01-29T21:42:45.044381 #84283]  INFO -- default-amazon:    - create new file /usr/lib/docker/docker-wait-ready
+I, [2018-01-29T21:42:45.044966 #84283]  INFO -- default-amazon:    - update content in file /usr/lib/docker/docker-wait-ready from none to 64d78d
+I, [2018-01-29T21:42:45.069728 #84283]  INFO -- default-amazon:    --- /usr/lib/docker/docker-wait-ready	2018-01-30 05:42:44.667686000 +0000
+I, [2018-01-29T21:42:45.070063 #84283]  INFO -- default-amazon:    +++ /usr/lib/docker/.chef-docker-wait-ready20180130-3001-1se5ju1	2018-01-30 05:42:44.667686000 +0000
+I, [2018-01-29T21:42:45.070305 #84283]  INFO -- default-amazon:    @@ -1 +1,11 @@
+I, [2018-01-29T21:42:45.070519 #84283]  INFO -- default-amazon:    +#!/usr/bin/env bash
+I, [2018-01-29T21:42:45.070815 #84283]  INFO -- default-amazon:    +i=0
+I, [2018-01-29T21:42:45.070994 #84283]  INFO -- default-amazon:    +while [ $i -lt 40 ]; do
+I, [2018-01-29T21:42:45.125998 #84283]  INFO -- default-amazon:    +  /usr/bin/docker  ps | head -n 1 | grep ^CONTAINER > /dev/null 2>&1
+I, [2018-01-29T21:42:45.126321 #84283]  INFO -- default-amazon:    +  [ $? -eq 0 ] && break
+I, [2018-01-29T21:42:45.126604 #84283]  INFO -- default-amazon:    +  ((i++))
+I, [2018-01-29T21:42:45.126785 #84283]  INFO -- default-amazon:    +  sleep 0.5
+I, [2018-01-29T21:42:45.127014 #84283]  INFO -- default-amazon:    +done
+I, [2018-01-29T21:42:45.127179 #84283]  INFO -- default-amazon:    +[ $i -eq 40 ] && exit 1
+I, [2018-01-29T21:42:45.127397 #84283]  INFO -- default-amazon:    +exit 0
+I, [2018-01-29T21:42:45.127559 #84283]  INFO -- default-amazon:    - change mode from '' to '0755'
+I, [2018-01-29T21:42:45.127765 #84283]  INFO -- default-amazon:    - change owner from '' to 'root'
+I, [2018-01-29T21:42:45.127927 #84283]  INFO -- default-amazon:    - change group from '' to 'root'
+I, [2018-01-29T21:42:45.128117 #84283]  INFO -- default-amazon:  * execute[groupadd docker] action run (skipped due to not_if)
+I, [2018-01-29T21:42:45.128247 #84283]  INFO -- default-amazon:  * link[/usr/bin/dockerd-default] action create (up to date)
+I, [2018-01-29T21:42:45.128489 #84283]  INFO -- default-amazon:  * template[/etc/init.d/docker] action create (up to date)
+I, [2018-01-29T21:42:45.128785 #84283]  INFO -- default-amazon:  * template[/etc/sysconfig/docker] action create (up to date)
+I, [2018-01-29T21:42:45.128955 #84283]  INFO -- default-amazon:  * service[docker] action enable (up to date)
+I, [2018-01-29T21:42:47.141565 #84283]  INFO -- default-amazon:  * service[docker] action start
+I, [2018-01-29T21:42:47.141962 #84283]  INFO -- default-amazon:    - start service service[docker]
+I, [2018-01-29T21:42:47.142244 #84283]  INFO -- default-amazon:       
+I, [2018-01-29T21:42:47.142368 #84283]  INFO -- default-amazon:     
+I, [2018-01-29T21:42:47.142521 #84283]  INFO -- default-amazon:   
+I, [2018-01-29T21:42:47.142759 #84283]  INFO -- default-amazon:   * docker_service[default] action start
+I, [2018-01-29T21:42:47.142990 #84283]  INFO -- default-amazon:     * docker_service_manager_sysvinit_rhel[default] action start
+I, [2018-01-29T21:42:47.201488 #84283]  INFO -- default-amazon:       * directory[/usr/lib/docker] action create (up to date)
+I, [2018-01-29T21:42:47.201756 #84283]  INFO -- default-amazon:       * template[/usr/lib/docker/docker-wait-ready] action create (up to date)
+I, [2018-01-29T21:42:47.201896 #84283]  INFO -- default-amazon:       * execute[groupadd docker] action run (skipped due to not_if)
+I, [2018-01-29T21:42:47.202055 #84283]  INFO -- default-amazon:       * link[/usr/bin/dockerd-default] action create (up to date)
+I, [2018-01-29T21:42:47.202260 #84283]  INFO -- default-amazon:       * template[/etc/init.d/docker] action create (up to date)
+I, [2018-01-29T21:42:47.202422 #84283]  INFO -- default-amazon:       * template[/etc/sysconfig/docker] action create (up to date)
+I, [2018-01-29T21:42:47.252306 #84283]  INFO -- default-amazon:       * service[docker] action enable (up to date)
+I, [2018-01-29T21:42:47.252554 #84283]  INFO -- default-amazon:       * service[docker] action start (up to date)
+I, [2018-01-29T21:42:47.252682 #84283]  INFO -- default-amazon: (up to date)
+I, [2018-01-29T21:42:47.252799 #84283]  INFO -- default-amazon:      (up to date)
+I, [2018-01-29T21:42:58.645365 #84283]  INFO -- default-amazon:   * docker_image[jenkins] action pull
+I, [2018-01-29T21:42:58.645856 #84283]  INFO -- default-amazon:     - Pull image vfarcic/jenkins:latest
+I, [2018-01-29T21:42:58.646165 #84283]  INFO -- default-amazon:   * docker_container[jenkins_server] action run
+I, [2018-01-29T21:42:58.646271 #84283]  INFO -- default-amazon:     - create jenkins_server
+I, [2018-01-29T21:42:58.646372 #84283]  INFO -- default-amazon:     -   set container_name              to "jenkins_server" (default value)
+I, [2018-01-29T21:42:58.646400 #84283]  INFO -- default-amazon:     -   set repo                        to "vfarcic/jenkins"
+I, [2018-01-29T21:42:58.646536 #84283]  INFO -- default-amazon:     -   set tag                         to "latest" (default value)
+I, [2018-01-29T21:42:58.646676 #84283]  INFO -- default-amazon:     -   set command                     to nil (default value)
+I, [2018-01-29T21:42:58.776941 #84283]  INFO -- default-amazon:     -   set cap_add                     to nil (default value)
+I, [2018-01-29T21:42:58.777109 #84283]  INFO -- default-amazon:     -   set cap_drop                    to nil (default value)
+I, [2018-01-29T21:42:58.777350 #84283]  INFO -- default-amazon:     -   set cgroup_parent               to "" (default value)
+I, [2018-01-29T21:42:58.777514 #84283]  INFO -- default-amazon:     -   set cpu_shares                  to 0 (default value)
+I, [2018-01-29T21:42:58.777625 #84283]  INFO -- default-amazon:     -   set cpuset_cpus                 to "" (default value)
+I, [2018-01-29T21:42:58.777817 #84283]  INFO -- default-amazon:     -   set devices                     to [] (default value)
+I, [2018-01-29T21:42:58.777931 #84283]  INFO -- default-amazon:     -   set dns                         to [] (default value)
+I, [2018-01-29T21:42:58.778040 #84283]  INFO -- default-amazon:     -   set dns_search                  to [] (default value)
+I, [2018-01-29T21:42:58.778208 #84283]  INFO -- default-amazon:     -   set domain_name                 to "" (default value)
+I, [2018-01-29T21:42:58.778334 #84283]  INFO -- default-amazon:     -   set entrypoint                  to nil (default value)
+I, [2018-01-29T21:42:58.778468 #84283]  INFO -- default-amazon:     -   set env                         to [] (default value)
+I, [2018-01-29T21:42:58.778687 #84283]  INFO -- default-amazon:     -   set extra_hosts                 to nil (default value)
+I, [2018-01-29T21:42:58.778802 #84283]  INFO -- default-amazon:     -   set exposed_ports               to {"8080/tcp"=>{}}
+I, [2018-01-29T21:42:58.778930 #84283]  INFO -- default-amazon:     -   set hostname                    to nil (default value)
+I, [2018-01-29T21:42:58.779159 #84283]  INFO -- default-amazon:     -   set ipc_mode                    to "" (default value)
+I, [2018-01-29T21:42:58.779278 #84283]  INFO -- default-amazon:     -   set kernel_memory               to 0 (default value)
+I, [2018-01-29T21:42:58.779385 #84283]  INFO -- default-amazon:     -   set labels                      to {} (default value)
+I, [2018-01-29T21:42:58.779523 #84283]  INFO -- default-amazon:     -   set links                       to nil (default value)
+I, [2018-01-29T21:42:58.779634 #84283]  INFO -- default-amazon:     -   set init                        to nil (default value)
+I, [2018-01-29T21:42:58.779773 #84283]  INFO -- default-amazon:     -   set ip_address                  to nil (default value)
+I, [2018-01-29T21:42:58.779901 #84283]  INFO -- default-amazon:     -   set mac_address                 to nil (default value)
+I, [2018-01-29T21:42:58.780015 #84283]  INFO -- default-amazon:     -   set memory                      to 0 (default value)
+I, [2018-01-29T21:42:58.780125 #84283]  INFO -- default-amazon:     -   set memory_swap                 to 0 (default value)
+I, [2018-01-29T21:42:58.780388 #84283]  INFO -- default-amazon:     -   set memory_swappiness           to 0 (default value)
+I, [2018-01-29T21:42:58.780576 #84283]  INFO -- default-amazon:     -   set memory_reservation          to 0 (default value)
+I, [2018-01-29T21:42:58.780734 #84283]  INFO -- default-amazon:     -   set network_disabled            to false (default value)
+I, [2018-01-29T21:42:58.780849 #84283]  INFO -- default-amazon:     -   set network_mode                to "bridge" (default value)
+I, [2018-01-29T21:42:58.780961 #84283]  INFO -- default-amazon:     -   set network_aliases             to [] (default value)
+I, [2018-01-29T21:42:58.781133 #84283]  INFO -- default-amazon:     -   set outfile                     to nil (default value)
+I, [2018-01-29T21:42:58.781247 #84283]  INFO -- default-amazon:     -   set port_bindings               to {"8080/tcp"=>[{"HostIp"=>"0.0.0.0", "HostPort"=>"8080"}]}
+I, [2018-01-29T21:42:58.781398 #84283]  INFO -- default-amazon:     -   set pid_mode                    to "" (default value)
+I, [2018-01-29T21:42:58.781510 #84283]  INFO -- default-amazon:     -   set privileged                  to false (default value)
+I, [2018-01-29T21:42:58.781619 #84283]  INFO -- default-amazon:     -   set publish_all_ports           to false (default value)
+I, [2018-01-29T21:42:58.781808 #84283]  INFO -- default-amazon:     -   set remove_volumes              to false (default value)
+I, [2018-01-29T21:42:58.781918 #84283]  INFO -- default-amazon:     -   set restart_maximum_retry_count to 0 (default value)
+I, [2018-01-29T21:42:58.782026 #84283]  INFO -- default-amazon:     -   set restart_policy              to nil (default value)
+I, [2018-01-29T21:42:58.782189 #84283]  INFO -- default-amazon:     -   set ro_rootfs                   to false (default value)
+I, [2018-01-29T21:42:58.782340 #84283]  INFO -- default-amazon:     -   set security_opt                to nil (default value)
+I, [2018-01-29T21:42:58.782479 #84283]  INFO -- default-amazon:     -   set signal                      to "SIGTERM" (default value)
+I, [2018-01-29T21:42:58.782659 #84283]  INFO -- default-amazon:     -   set sysctls                     to {} (default value)
+I, [2018-01-29T21:42:58.782767 #84283]  INFO -- default-amazon:     -   set tty                         to false (default value)
+I, [2018-01-29T21:42:58.782928 #84283]  INFO -- default-amazon:     -   set ulimits                     to nil (default value)
+I, [2018-01-29T21:42:58.783038 #84283]  INFO -- default-amazon:     -   set user                        to "" (default value)
+I, [2018-01-29T21:42:58.783146 #84283]  INFO -- default-amazon:     -   set userns_mode                 to "" (default value)
+I, [2018-01-29T21:42:58.783283 #84283]  INFO -- default-amazon:     -   set uts_mode                    to "" (default value)
+I, [2018-01-29T21:42:58.783419 #84283]  INFO -- default-amazon:     -   set volumes                     to {} (default value)
+I, [2018-01-29T21:42:58.783526 #84283]  INFO -- default-amazon:     -   set volumes_from                to nil (default value)
+I, [2018-01-29T21:42:58.783669 #84283]  INFO -- default-amazon:     -   set volume_driver               to nil (default value)
+I, [2018-01-29T21:42:58.783776 #84283]  INFO -- default-amazon:     -   set working_dir                 to "" (default value)
+I, [2018-01-29T21:42:59.044797 #84283]  INFO -- default-amazon:     -   set volumes_binds               to nil (default value)
+I, [2018-01-29T21:42:59.059600 #84283]  INFO -- default-amazon:     - starting jenkins_server
+I, [2018-01-29T21:42:59.059812 #84283]  INFO -- default-amazon: Recipe: chef-client::init_service
+I, [2018-01-29T21:43:01.071077 #84283]  INFO -- default-amazon:   * service[chef-client] action restart
+I, [2018-01-29T21:43:01.071219 #84283]  INFO -- default-amazon:     - restart service service[chef-client]
+I, [2018-01-29T21:43:01.147776 #84283]  INFO -- default-amazon: 
+I, [2018-01-29T21:43:01.148020 #84283]  INFO -- default-amazon: Running handlers:
+I, [2018-01-29T21:43:01.148192 #84283]  INFO -- default-amazon: Running handlers complete
+I, [2018-01-29T21:43:01.148519 #84283]  INFO -- default-amazon: Chef Client finished, 32/51 resources updated in 37 seconds
+I, [2018-01-29T21:43:01.266634 #84283]  INFO -- default-amazon: Finished converging <default-amazon> (2m21.78s).
+I, [2018-01-29T21:43:01.267037 #84283]  INFO -- default-amazon: -----> Setting up <default-amazon>...
+I, [2018-01-29T21:43:01.268070 #84283]  INFO -- default-amazon: Finished setting up <default-amazon> (0m0.00s).
+I, [2018-01-29T21:43:01.268200 #84283]  INFO -- default-amazon: -----> Verifying <default-amazon>...
+I, [2018-01-29T21:43:01.268669 #84283]  INFO -- default-amazon: Preparing files for transfer
+I, [2018-01-29T21:43:02.224852 #84283]  INFO -- default-amazon: -----> Installing Busser (busser)
+I, [2018-01-29T21:43:04.223104 #84283]  INFO -- default-amazon: Fetching: thor-0.19.0.gemFetching: thor-0.19.0.gem (  3%)Fetching: thor-0.19.0.gem (  6%)Fetching: thor-0.19.0.gem (  9%)Fetching: thor-0.19.0.gem ( 12%)Fetching: thor-0.19.0.gem ( 15%)Fetching: thor-0.19.0.gem ( 17%)Fetching: thor-0.19.0.gem ( 20%)Fetching: thor-0.19.0.gem ( 23%)Fetching: thor-0.19.0.gem ( 26%)Fetching: thor-0.19.0.gem ( 29%)Fetching: thor-0.19.0.gem ( 32%)Fetching: thor-0.19.0.gem ( 35%)Fetching: thor-0.19.0.gem ( 53%)Fetching: thor-0.19.0.gem ( 71%)Fetching: thor-0.19.0.gem ( 89%)Fetching: thor-0.19.0.gem (100%)Fetching: thor-0.19.0.gem (100%)
+I, [2018-01-29T21:43:04.223334 #84283]  INFO -- default-amazon: Successfully installed thor-0.19.0
+I, [2018-01-29T21:43:04.223757 #84283]  INFO -- default-amazon: Fetching: busser-0.7.1.gemFetching: busser-0.7.1.gem ( 64%)Fetching: busser-0.7.1.gem (100%)Fetching: busser-0.7.1.gem (100%)
+I, [2018-01-29T21:43:04.223977 #84283]  INFO -- default-amazon: Successfully installed busser-0.7.1
+I, [2018-01-29T21:43:04.224051 #84283]  INFO -- default-amazon: 2 gems installed
+I, [2018-01-29T21:43:04.224221 #84283]  INFO -- default-amazon: -----> Installing Busser plugin: busser-serverspec
+I, [2018-01-29T21:43:04.937908 #84283]  INFO -- default-amazon: Plugin serverspec installed (version 0.5.10)
+I, [2018-01-29T21:43:04.945503 #84283]  INFO -- default-amazon: -----> Running postinstall for serverspec plugin
+I, [2018-01-29T21:43:06.047180 #84283]  INFO -- default-amazon: Suite path directory /tmp/verifier/suites does not exist, skipping.
+I, [2018-01-29T21:43:06.047904 #84283]  INFO -- default-amazon: Transferring files to <default-amazon>
+I, [2018-01-29T21:43:08.667667 #84283]  INFO -- default-amazon: -----> Running serverspec test suite
+I, [2018-01-29T21:43:08.675438 #84283]  INFO -- default-amazon: -----> Installing Serverspec..
+I, [2018-01-29T21:43:09.788223 #84283]  INFO -- default-amazon: Fetching: diff-lcs-1.3.gemFetching: diff-lcs-1.3.gem (  5%)Fetching: diff-lcs-1.3.gem ( 11%)Fetching: diff-lcs-1.3.gem ( 16%)Fetching: diff-lcs-1.3.gem ( 22%)Fetching: diff-lcs-1.3.gem ( 28%)Fetching: diff-lcs-1.3.gem ( 34%)Fetching: diff-lcs-1.3.gem ( 40%)Fetching: diff-lcs-1.3.gem ( 46%)Fetching: diff-lcs-1.3.gem ( 52%)Fetching: diff-lcs-1.3.gem ( 58%)Fetching: diff-lcs-1.3.gem ( 64%)Fetching: diff-lcs-1.3.gem ( 70%)Fetching: diff-lcs-1.3.gem (100%)Fetching: diff-lcs-1.3.gem (100%)
+I, [2018-01-29T21:43:10.367205 #84283]  INFO -- default-amazon: Fetching: rspec-expectations-3.7.0.gemFetching: rspec-expectations-3.7.0.gem ( 20%)Fetching: rspec-expectations-3.7.0.gem ( 40%)Fetching: rspec-expectations-3.7.0.gem ( 60%)Fetching: rspec-expectations-3.7.0.gem ( 80%)Fetching: rspec-expectations-3.7.0.gem (100%)Fetching: rspec-expectations-3.7.0.gem (100%)
+I, [2018-01-29T21:43:10.873481 #84283]  INFO -- default-amazon: Fetching: rspec-mocks-3.7.0.gemFetching: rspec-mocks-3.7.0.gem ( 20%)Fetching: rspec-mocks-3.7.0.gem ( 41%)Fetching: rspec-mocks-3.7.0.gem ( 62%)Fetching: rspec-mocks-3.7.0.gem ( 84%)Fetching: rspec-mocks-3.7.0.gem (100%)Fetching: rspec-mocks-3.7.0.gem (100%)
+I, [2018-01-29T21:43:11.716749 #84283]  INFO -- default-amazon: Fetching: rspec-3.7.0.gemFetching: rspec-3.7.0.gem (100%)Fetching: rspec-3.7.0.gem (100%)
+I, [2018-01-29T21:43:12.783495 #84283]  INFO -- default-amazon: Fetching: rspec-its-1.2.0.gemFetching: rspec-its-1.2.0.gem (100%)Fetching: rspec-its-1.2.0.gem (100%)
+I, [2018-01-29T21:43:13.058042 #84283]  INFO -- default-amazon: Fetching: multi_json-1.13.1.gemFetching: multi_json-1.13.1.gem ( 61%)Fetching: multi_json-1.13.1.gem (100%)Fetching: multi_json-1.13.1.gem (100%)
+I, [2018-01-29T21:43:13.775418 #84283]  INFO -- default-amazon: Fetching: net-ssh-4.2.0.gemFetching: net-ssh-4.2.0.gem ( 13%)Fetching: net-ssh-4.2.0.gem ( 26%)Fetching: net-ssh-4.2.0.gem ( 38%)Fetching: net-ssh-4.2.0.gem ( 51%)Fetching: net-ssh-4.2.0.gem ( 64%)Fetching: net-ssh-4.2.0.gem ( 77%)Fetching: net-ssh-4.2.0.gem ( 90%)Fetching: net-ssh-4.2.0.gem (100%)Fetching: net-ssh-4.2.0.gem (100%)
+I, [2018-01-29T21:43:14.924357 #84283]  INFO -- default-amazon: Fetching: net-scp-1.2.1.gemFetching: net-scp-1.2.1.gem ( 48%)Fetching: net-scp-1.2.1.gem ( 98%)Fetching: net-scp-1.2.1.gem (100%)Fetching: net-scp-1.2.1.gem (100%)
+I, [2018-01-29T21:43:15.066925 #84283]  INFO -- default-amazon: Fetching: net-telnet-0.1.1.gemFetching: net-telnet-0.1.1.gem ( 92%)Fetching: net-telnet-0.1.1.gem (100%)Fetching: net-telnet-0.1.1.gem (100%)
+I, [2018-01-29T21:43:15.483114 #84283]  INFO -- default-amazon: Fetching: sfl-2.3.gemFetching: sfl-2.3.gem (100%)Fetching: sfl-2.3.gem (100%)
+I, [2018-01-29T21:43:16.146620 #84283]  INFO -- default-amazon: Fetching: specinfra-2.73.1.gemFetching: specinfra-2.73.1.gem ( 18%)Fetching: specinfra-2.73.1.gem ( 37%)Fetching: specinfra-2.73.1.gem ( 56%)Fetching: specinfra-2.73.1.gem ( 75%)Fetching: specinfra-2.73.1.gem ( 94%)Fetching: specinfra-2.73.1.gem (100%)Fetching: specinfra-2.73.1.gem (100%)
+I, [2018-01-29T21:43:16.885641 #84283]  INFO -- default-amazon: Fetching: serverspec-2.41.3.gemFetching: serverspec-2.41.3.gem ( 40%)Fetching: serverspec-2.41.3.gem ( 81%)Fetching: serverspec-2.41.3.gem (100%)Fetching: serverspec-2.41.3.gem (100%)
+I, [2018-01-29T21:43:17.025839 #84283]  INFO -- default-amazon: -----> serverspec installed (version 2.41.3)
+I, [2018-01-29T21:43:17.431858 #84283]  INFO -- default-amazon: /opt/chef/embedded/bin/ruby -I/tmp/verifier/suites/serverspec -I/tmp/verifier/gems/gems/rspec-support-3.7.1/lib:/tmp/verifier/gems/gems/rspec-core-3.7.1/lib /opt/chef/embedded/bin/rspec --pattern /tmp/verifier/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/verifier/suites/serverspec
+I, [2018-01-29T21:43:18.077929 #84283]  INFO -- default-amazon: 
+I, [2018-01-29T21:43:18.078197 #84283]  INFO -- default-amazon: Service "chef-client"
+I, [2018-01-29T21:43:18.078311 #84283]  INFO -- default-amazon: [32m  should be enabled[0m
+I, [2018-01-29T21:43:18.139699 #84283]  INFO -- default-amazon: [32m  should be running[0m
+I, [2018-01-29T21:43:18.139762 #84283]  INFO -- default-amazon: 
+I, [2018-01-29T21:43:18.139785 #84283]  INFO -- default-amazon: Finished in 0.23054 seconds (files took 0.60512 seconds to load)
+I, [2018-01-29T21:43:18.139805 #84283]  INFO -- default-amazon: [32m2 examples, 0 failures[0m
+I, [2018-01-29T21:43:18.139822 #84283]  INFO -- default-amazon: 
+I, [2018-01-29T21:43:18.156850 #84283]  INFO -- default-amazon: Finished verifying <default-amazon> (0m16.89s).

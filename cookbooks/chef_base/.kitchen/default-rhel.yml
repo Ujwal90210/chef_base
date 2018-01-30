@@ -1,5 +1,0 @@
----
-server_id: i-02bde2776adc00d22
-hostname: ec2-34-207-188-206.compute-1.amazonaws.com
-last_action: create
-last_error: Kitchen::ActionFailed

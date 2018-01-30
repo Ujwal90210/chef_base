@@ -3,9 +3,14 @@ pipeline {
       label 'chef' // only run on chef nodes
     }
     stages {
+        stage 'fetch code'
+         dir('chef_repo'){
+             git credentialsId: 'be857a0bb56d8a8f7ed9dd90a6d9ae8d4876b582', url: 'https://github.com/Ujwal90210/chef_base.git'
+         }
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'cd cookbooks/chef_base'
                 sh 'berks vendor cookbooks' // build cookbook with all dependencies
             }
         }
