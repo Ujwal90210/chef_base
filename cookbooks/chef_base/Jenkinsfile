@@ -4,12 +4,18 @@ pipeline {
       }
     stages {
         stage('fetch code'){
+        agent {
+          label 'chef' // only run on chef node
+          }
          steps{
             sh 'ifconfig'
              git credentialsId: 'be857a0bb56d8a8f7ed9dd90a6d9ae8d4876b582', url: 'https://github.com/Ujwal90210/chef_base.git'
          }
         }
         stage('Build') {
+        agent {
+          label 'chef' // only run on chef node
+          }
             steps {
                 echo 'Building..'
                 sh 'cd /home/ec2-user/workspace/chef_cookbook_build/chef_base/cookbooks/chef_base'
