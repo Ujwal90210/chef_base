@@ -20,7 +20,15 @@ pipeline {
                 sh 'cd cookbooks/chef_base; berks vendor cookbooks' // build cookbook with all dependencies
             }
         }
-        stage('Local Tests') {
+        stage('Lint Tests') {
+            steps {
+                echo 'Testing..'
+              //  sh 'cd cookbooks/chef_base; chef exec rake style:ruby' // run rubocop
+              //  sh 'cd cookbooks/chef_base; chef exec rake style:chef' // run foodcritic
+            }
+
+        }
+        stage('Unit Tests') {
             steps {
                 echo 'Testing..'
               //  sh 'cd cookbooks/chef_base; chef exec rake style:ruby' // run rubocop
@@ -36,12 +44,12 @@ pipeline {
                 // run kitchen test with a concurrency of 2 at a time
                 sh 'cd cookbooks/chef_base; chef exec rake integration'
            }
-            post {
-              always {
+            //post {
+              //always {
                 // publish serverspec results
                 junit 'serverspec*.xml'
-              }
-            }
+              //}
+            //}
         }
     }
 //  post {
