@@ -11,7 +11,8 @@ namespace :style do
   desc 'Run Chef style checks'
   FoodCritic::Rake::LintTask.new(:chef) do |t|
     t.options = {
-      fail_tags: ['any']
+      tags: %w(~LKOUT001 ~CINK001 ~CINK002),
+      fail_tags: ['any'],
     }
   end
 end
