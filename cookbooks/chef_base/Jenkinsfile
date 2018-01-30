@@ -12,9 +12,6 @@ pipeline {
          }
         }
         stage('Build') {
-        agent {
-          label 'chef' // only run on chef node
-          }
             steps {
                 echo 'Building..'
                 sh 'cd cookbooks/chef_base; berks vendor cookbooks' // build cookbook with all dependencies
@@ -71,9 +68,9 @@ pipeline {
        }
      
     }
-//  post {
-//      always {
-//         deleteDir() /* clean up our workspace */
-//      }
-//     }
+  post {
+      always {
+        deleteDir() /* clean up our workspace */
+     }
+  }
 }
