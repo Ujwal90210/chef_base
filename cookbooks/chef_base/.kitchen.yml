@@ -19,7 +19,8 @@ transport:
 #  compression: zlib
 #  compression_level: 9
   username: ec2-user
-  ssh_key: /Users/ujwaly/Development/keys/fox-ec2.pem
+  #ssh_key: /Users/ujwaly/Development/keys/fox-ec2.pem
+  ssh_key: /home/ec2-user/fox-ec2.pem
 
 platforms:
   - name: amazon
