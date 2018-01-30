@@ -1,7 +1,7 @@
 pipeline {
     agent {
       label 'chef' // only run on chef node
-
+      }
     stages {
         stage('fetch code'){
          steps{
