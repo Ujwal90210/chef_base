@@ -22,9 +22,9 @@ transport:
   ssh_key: /Users/ujwaly/Development/keys/fox-ec2.pem
 
 platforms:
-  - name: rhel
+  - name: amazon
     driver:
-      image_id: ami-26ebbc5c
+      image_id: ami-97785bed
       block_device_mappings:
         - device_name: '/dev/xvde'
           ebs:

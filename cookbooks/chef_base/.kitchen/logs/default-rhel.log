@@ -1,202 +1,514 @@
-I, [2018-01-29T08:52:06.107044 #57854]  INFO -- default-rhel: -----> Cleaning up any prior instances of <default-rhel>
-I, [2018-01-29T08:52:06.107188 #57854]  INFO -- default-rhel: -----> Destroying <default-rhel>...
-I, [2018-01-29T08:52:06.107945 #57854]  INFO -- default-rhel: Finished destroying <default-rhel> (0m0.00s).
-I, [2018-01-29T08:52:06.108269 #57854]  INFO -- default-rhel: -----> Testing <default-rhel>
-I, [2018-01-29T08:52:06.108347 #57854]  INFO -- default-rhel: -----> Creating <default-rhel>...
-I, [2018-01-29T08:52:07.480995 #57854]  INFO -- default-rhel: Detected platform: rhel version 7.4 on x86_64. Instance Type: m3.large. Default username: ec2-user (default).
-I, [2018-01-29T08:52:07.481189 #57854]  INFO -- default-rhel: If you are not using an account that qualifies under the AWS
+I, [2018-01-29T17:30:05.698721 #51251]  INFO -- default-rhel: -----> Cleaning up any prior instances of <default-rhel>
+I, [2018-01-29T17:30:05.699492 #51251]  INFO -- default-rhel: -----> Destroying <default-rhel>...
+I, [2018-01-29T17:30:06.313427 #51251]  INFO -- default-rhel: EC2 instance <i-0844ba0912b32c798> destroyed.
+I, [2018-01-29T17:30:06.314297 #51251]  INFO -- default-rhel: Finished destroying <default-rhel> (0m0.61s).
+I, [2018-01-29T17:30:06.314709 #51251]  INFO -- default-rhel: -----> Testing <default-rhel>
+I, [2018-01-29T17:30:06.314797 #51251]  INFO -- default-rhel: -----> Creating <default-rhel>...
+I, [2018-01-29T17:30:06.446656 #51251]  INFO -- default-rhel: Detected platform: rhel version 7.4 on x86_64. Instance Type: m3.large. Default username: ec2-user (default).
+I, [2018-01-29T17:30:06.446841 #51251]  INFO -- default-rhel: If you are not using an account that qualifies under the AWS
 free-tier, you may be charged to run these suites. The charge
 should be minimal, but neither Test Kitchen nor its maintainers
 are responsible for your incurred costs.
 
-I, [2018-01-29T08:52:08.810676 #57854]  INFO -- default-rhel: Instance <i-00d00e90bac645cc5> requested.
-I, [2018-01-29T08:52:08.810842 #57854]  INFO -- default-rhel: Polling AWS for existence, attempt 0...
-I, [2018-01-29T08:52:09.176150 #57854]  INFO -- default-rhel: Attempting to tag the instance, 0 retries
-I, [2018-01-29T08:52:09.462133 #57854]  INFO -- default-rhel: EC2 instance <i-00d00e90bac645cc5> created.
-I, [2018-01-29T08:52:09.462305 #57854]  INFO -- default-rhel: Waited 0/300s for instance <i-00d00e90bac645cc5> volumes to be ready.
-I, [2018-01-29T08:52:12.144508 #57854]  INFO -- default-rhel: Waited 0/300s for instance <i-00d00e90bac645cc5> to become ready.
-I, [2018-01-29T08:52:18.590938 #57854]  INFO -- default-rhel: Waited 5/300s for instance <i-00d00e90bac645cc5> to become ready.
-I, [2018-01-29T08:52:24.893995 #57854]  INFO -- default-rhel: Waited 10/300s for instance <i-00d00e90bac645cc5> to become ready.
-I, [2018-01-29T08:52:32.594273 #57854]  INFO -- default-rhel: Waited 15/300s for instance <i-00d00e90bac645cc5> to become ready.
-I, [2018-01-29T08:52:33.531368 #57854]  INFO -- default-rhel: EC2 instance <i-00d00e90bac645cc5> ready.
-I, [2018-01-29T08:52:36.799651 #57854]  INFO -- default-rhel: Waiting for SSH service on ec2-52-91-135-108.compute-1.amazonaws.com:22, retrying in 3 seconds
-I, [2018-01-29T08:52:39.979667 #57854]  INFO -- default-rhel: Waiting for SSH service on ec2-52-91-135-108.compute-1.amazonaws.com:22, retrying in 3 seconds
-I, [2018-01-29T08:52:48.096050 #57854]  INFO -- default-rhel: [SSH] Established
-I, [2018-01-29T08:52:48.592453 #57854]  INFO -- default-rhel: Finished creating <default-rhel> (0m42.48s).
-I, [2018-01-29T08:52:48.592965 #57854]  INFO -- default-rhel: -----> Converging <default-rhel>...
-I, [2018-01-29T08:52:48.595540 #57854]  INFO -- default-rhel: Preparing files for transfer
-I, [2018-01-29T08:52:48.595721 #57854]  INFO -- default-rhel: Preparing dna.json
-I, [2018-01-29T08:52:48.596917 #57854]  INFO -- default-rhel: Preparing current project directory as a cookbook
-I, [2018-01-29T08:52:48.611168 #57854]  INFO -- default-rhel: Removing non-cookbook files before transfer
-I, [2018-01-29T08:52:48.616260 #57854]  INFO -- default-rhel: Preparing validation.pem
-I, [2018-01-29T08:52:48.617203 #57854]  INFO -- default-rhel: Preparing client.rb
-I, [2018-01-29T08:52:49.128966 #57854]  INFO -- default-rhel: -----> Installing Chef Omnibus (install only if missing)
-I, [2018-01-29T08:52:49.135778 #57854]  INFO -- default-rhel: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
-I, [2018-01-29T08:52:49.135862 #57854]  INFO -- default-rhel: Trying curl...
-I, [2018-01-29T08:53:04.177961 #57854]  INFO -- default-rhel: Download complete.
-I, [2018-01-29T08:53:04.213752 #57854]  INFO -- default-rhel: el 7 x86_64
-I, [2018-01-29T08:53:04.213813 #57854]  INFO -- default-rhel: Getting information for chef stable  for el...
-I, [2018-01-29T08:53:04.213830 #57854]  INFO -- default-rhel: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=7&m=x86_64
-I, [2018-01-29T08:53:04.213849 #57854]  INFO -- default-rhel:   to file /tmp/install.sh.9119/metadata.txt
-I, [2018-01-29T08:53:04.214095 #57854]  INFO -- default-rhel: trying curl...
-I, [2018-01-29T08:53:04.390296 #57854]  INFO -- default-rhel: sha1	0d8b0f9b3ce0a2721f7e8ff7ea46330fd712df46
-I, [2018-01-29T08:53:04.390386 #57854]  INFO -- default-rhel: sha256	89c96addb749370044964b63d16382149f0756d54e833602dd91cf039a92a9f7
-I, [2018-01-29T08:53:04.390445 #57854]  INFO -- default-rhel: url	https://packages.chef.io/files/stable/chef/13.7.16/el/7/chef-13.7.16-1.el7.x86_64.rpm
-I, [2018-01-29T08:53:04.390827 #57854]  INFO -- default-rhel: version	13.7.16
-I, [2018-01-29T08:53:04.392883 #57854]  INFO -- default-rhel: downloaded metadata file looks valid...
-I, [2018-01-29T08:53:04.414395 #57854]  INFO -- default-rhel: downloading https://packages.chef.io/files/stable/chef/13.7.16/el/7/chef-13.7.16-1.el7.x86_64.rpm
-I, [2018-01-29T08:53:04.414504 #57854]  INFO -- default-rhel:   to file /tmp/install.sh.9119/chef-13.7.16-1.el7.x86_64.rpm
-I, [2018-01-29T08:53:04.414898 #57854]  INFO -- default-rhel: trying curl...
-I, [2018-01-29T08:53:05.749931 #57854]  INFO -- default-rhel: Comparing checksum with sha256sum...
-I, [2018-01-29T08:53:05.750183 #57854]  INFO -- default-rhel: 
-I, [2018-01-29T08:53:05.750238 #57854]  INFO -- default-rhel: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
-I, [2018-01-29T08:53:05.750297 #57854]  INFO -- default-rhel: 
-I, [2018-01-29T08:53:05.750321 #57854]  INFO -- default-rhel: You are installing an omnibus package without a version pin.  If you are installing
-I, [2018-01-29T08:53:05.750372 #57854]  INFO -- default-rhel: on production servers via an automated process this is DANGEROUS and you will
-I, [2018-01-29T08:53:05.750394 #57854]  INFO -- default-rhel: be upgraded without warning on new releases, even to new major releases.
-I, [2018-01-29T08:53:05.750414 #57854]  INFO -- default-rhel: Letting the version float is only appropriate in desktop, test, development or
-I, [2018-01-29T08:53:05.750444 #57854]  INFO -- default-rhel: CI/CD environments.
-I, [2018-01-29T08:53:05.750486 #57854]  INFO -- default-rhel: 
-I, [2018-01-29T08:53:05.750506 #57854]  INFO -- default-rhel: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
-I, [2018-01-29T08:53:05.750533 #57854]  INFO -- default-rhel: 
-I, [2018-01-29T08:53:05.750551 #57854]  INFO -- default-rhel: Installing chef 
-I, [2018-01-29T08:53:05.750576 #57854]  INFO -- default-rhel: installing with rpm...
-I, [2018-01-29T08:53:05.751145 #57854]  INFO -- default-rhel: warning: /tmp/install.sh.9119/chef-13.7.16-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
-I, [2018-01-29T08:53:05.984354 #57854]  INFO -- default-rhel: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
-I, [2018-01-29T08:53:06.003251 #57854]  INFO -- default-rhel: Updating / installing...
-I, [2018-01-29T08:53:16.952360 #57854]  INFO -- default-rhel:    1:chef-13.7.16-1.el7                                                 (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
-I, [2018-01-29T08:53:17.097333 #57854]  INFO -- default-rhel: Thank you for installing Chef!
-I, [2018-01-29T08:53:17.479751 #57854]  INFO -- default-rhel: Transferring files to <default-rhel>
-I, [2018-01-29T08:53:28.553241 #57854]  INFO -- default-rhel: Starting Chef Client, version 13.7.16
-I, [2018-01-29T08:53:29.732447 #57854]  INFO -- default-rhel: Creating a new client identity for default-rhel using the validator key.
-I, [2018-01-29T08:53:29.732672 #57854]  INFO -- default-rhel: resolving cookbooks for run list: ["linux_base::default"]
-I, [2018-01-29T08:53:29.732696 #57854]  INFO -- default-rhel: 
-I, [2018-01-29T08:53:29.732712 #57854]  INFO -- default-rhel: ================================================================================
-I, [2018-01-29T08:53:29.732725 #57854]  INFO -- default-rhel: Error Resolving Cookbooks for Run List:
-I, [2018-01-29T08:53:29.732738 #57854]  INFO -- default-rhel: ================================================================================
-I, [2018-01-29T08:53:29.732751 #57854]  INFO -- default-rhel: 
-I, [2018-01-29T08:53:29.732765 #57854]  INFO -- default-rhel: Missing Cookbooks:
-I, [2018-01-29T08:53:29.732777 #57854]  INFO -- default-rhel: ------------------
-I, [2018-01-29T08:53:29.732789 #57854]  INFO -- default-rhel: No such cookbook: linux_base
-I, [2018-01-29T08:53:29.732800 #57854]  INFO -- default-rhel: 
-I, [2018-01-29T08:53:29.732811 #57854]  INFO -- default-rhel: Expanded Run List:
-I, [2018-01-29T08:53:29.732821 #57854]  INFO -- default-rhel: ------------------
-I, [2018-01-29T08:53:29.732833 #57854]  INFO -- default-rhel: * linux_base::default
-I, [2018-01-29T08:53:29.732844 #57854]  INFO -- default-rhel: 
-I, [2018-01-29T08:53:29.732855 #57854]  INFO -- default-rhel: System Info:
-I, [2018-01-29T08:53:29.732865 #57854]  INFO -- default-rhel: ------------
-I, [2018-01-29T08:53:29.732876 #57854]  INFO -- default-rhel: chef_version=13.7.16
-I, [2018-01-29T08:53:29.732887 #57854]  INFO -- default-rhel: platform=redhat
-I, [2018-01-29T08:53:29.732897 #57854]  INFO -- default-rhel: platform_version=7.4
-I, [2018-01-29T08:53:29.732909 #57854]  INFO -- default-rhel: ruby=ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]
-I, [2018-01-29T08:53:29.732920 #57854]  INFO -- default-rhel: program_name=chef-client worker: ppid=10571;start=16:53:28;
-I, [2018-01-29T08:53:29.732932 #57854]  INFO -- default-rhel: executable=/opt/chef/bin/chef-client
-I, [2018-01-29T08:53:29.732943 #57854]  INFO -- default-rhel: 
-I, [2018-01-29T08:53:29.732954 #57854]  INFO -- default-rhel: 
-I, [2018-01-29T08:53:29.732965 #57854]  INFO -- default-rhel: Running handlers:
-I, [2018-01-29T08:53:29.732976 #57854]  INFO -- default-rhel: [2018-01-29T16:53:29+00:00] ERROR: Running exception handlers
-I, [2018-01-29T08:53:29.732987 #57854]  INFO -- default-rhel: Running handlers complete
-I, [2018-01-29T08:53:29.733034 #57854]  INFO -- default-rhel: [2018-01-29T16:53:29+00:00] ERROR: Exception handlers complete
-I, [2018-01-29T08:53:29.733046 #57854]  INFO -- default-rhel: Chef Client failed. 0 resources updated in 01 seconds
-I, [2018-01-29T08:53:29.733075 #57854]  INFO -- default-rhel: [2018-01-29T16:53:29+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
-I, [2018-01-29T08:53:29.733087 #57854]  INFO -- default-rhel: [2018-01-29T16:53:29+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
-I, [2018-01-29T08:53:29.733111 #57854]  INFO -- default-rhel: [2018-01-29T16:53:29+00:00] ERROR: 412 "Precondition Failed"
-I, [2018-01-29T08:53:29.733575 #57854]  INFO -- default-rhel: [2018-01-29T16:53:29+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
-E, [2018-01-29T08:53:29.735764 #57854] ERROR -- default-rhel: Converge failed on instance <default-rhel>.
-E, [2018-01-29T08:53:29.735947 #57854] ERROR -- default-rhel: ------Exception-------
-E, [2018-01-29T08:53:29.735984 #57854] ERROR -- default-rhel: Class: Kitchen::ActionFailed
-E, [2018-01-29T08:53:29.735994 #57854] ERROR -- default-rhel: Message: SSH exited (1) for command: [sh -c '
+I, [2018-01-29T17:30:08.411864 #51251]  INFO -- default-rhel: Instance <i-02bde2776adc00d22> requested.
+I, [2018-01-29T17:30:08.412018 #51251]  INFO -- default-rhel: Polling AWS for existence, attempt 0...
+I, [2018-01-29T17:30:08.739941 #51251]  INFO -- default-rhel: Attempting to tag the instance, 0 retries
+I, [2018-01-29T17:30:08.963367 #51251]  INFO -- default-rhel: EC2 instance <i-02bde2776adc00d22> created.
+I, [2018-01-29T17:30:08.963500 #51251]  INFO -- default-rhel: Waited 0/300s for instance <i-02bde2776adc00d22> volumes to be ready.
+I, [2018-01-29T17:30:10.574654 #51251]  INFO -- default-rhel: Waited 0/300s for instance <i-02bde2776adc00d22> to become ready.
+I, [2018-01-29T17:30:16.079978 #51251]  INFO -- default-rhel: Waited 5/300s for instance <i-02bde2776adc00d22> to become ready.
+I, [2018-01-29T17:30:21.719697 #51251]  INFO -- default-rhel: Waited 10/300s for instance <i-02bde2776adc00d22> to become ready.
+I, [2018-01-29T17:30:27.450082 #51251]  INFO -- default-rhel: Waited 15/300s for instance <i-02bde2776adc00d22> to become ready.
+I, [2018-01-29T17:30:27.976845 #51251]  INFO -- default-rhel: EC2 instance <i-02bde2776adc00d22> ready.
+I, [2018-01-29T17:30:30.168531 #51251]  INFO -- default-rhel: Waiting for SSH service on ec2-34-207-188-206.compute-1.amazonaws.com:22, retrying in 3 seconds
+I, [2018-01-29T17:30:33.260397 #51251]  INFO -- default-rhel: Waiting for SSH service on ec2-34-207-188-206.compute-1.amazonaws.com:22, retrying in 3 seconds
+I, [2018-01-29T17:30:40.123618 #51251]  INFO -- default-rhel: [SSH] Established
+I, [2018-01-29T17:30:40.397472 #51251]  INFO -- default-rhel: Finished creating <default-rhel> (0m34.08s).
+I, [2018-01-29T17:30:40.397616 #51251]  INFO -- default-rhel: -----> Converging <default-rhel>...
+I, [2018-01-29T17:30:40.403824 #51251]  INFO -- default-rhel: Preparing files for transfer
+I, [2018-01-29T17:30:40.404059 #51251]  INFO -- default-rhel: Preparing dna.json
+I, [2018-01-29T17:30:40.404778 #51251]  INFO -- default-rhel: Resolving cookbook dependencies with Berkshelf 6.3.1...
+I, [2018-01-29T17:30:40.721490 #51251]  INFO -- default-rhel: Removing non-cookbook files before transfer
+I, [2018-01-29T17:30:40.736089 #51251]  INFO -- default-rhel: Preparing validation.pem
+I, [2018-01-29T17:30:40.738697 #51251]  INFO -- default-rhel: Preparing client.rb
+I, [2018-01-29T17:30:41.198294 #51251]  INFO -- default-rhel: -----> Installing Chef Omnibus (install only if missing)
+I, [2018-01-29T17:30:41.209310 #51251]  INFO -- default-rhel: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2018-01-29T17:30:41.209376 #51251]  INFO -- default-rhel: Trying curl...
+I, [2018-01-29T17:30:41.534230 #51251]  INFO -- default-rhel: Download complete.
+I, [2018-01-29T17:30:41.575326 #51251]  INFO -- default-rhel: el 7 x86_64
+I, [2018-01-29T17:30:41.575400 #51251]  INFO -- default-rhel: Getting information for chef stable  for el...
+I, [2018-01-29T17:30:41.575424 #51251]  INFO -- default-rhel: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=7&m=x86_64
+I, [2018-01-29T17:30:41.575457 #51251]  INFO -- default-rhel:   to file /tmp/install.sh.5611/metadata.txt
+I, [2018-01-29T17:30:41.576662 #51251]  INFO -- default-rhel: trying curl...
+I, [2018-01-29T17:30:41.757263 #51251]  INFO -- default-rhel: sha1	0d8b0f9b3ce0a2721f7e8ff7ea46330fd712df46
+I, [2018-01-29T17:30:41.757378 #51251]  INFO -- default-rhel: sha256	89c96addb749370044964b63d16382149f0756d54e833602dd91cf039a92a9f7
+I, [2018-01-29T17:30:41.757414 #51251]  INFO -- default-rhel: url	https://packages.chef.io/files/stable/chef/13.7.16/el/7/chef-13.7.16-1.el7.x86_64.rpm
+I, [2018-01-29T17:30:41.757439 #51251]  INFO -- default-rhel: version	13.7.16
+I, [2018-01-29T17:30:41.759730 #51251]  INFO -- default-rhel: downloaded metadata file looks valid...
+I, [2018-01-29T17:30:41.782840 #51251]  INFO -- default-rhel: downloading https://packages.chef.io/files/stable/chef/13.7.16/el/7/chef-13.7.16-1.el7.x86_64.rpm
+I, [2018-01-29T17:30:41.782912 #51251]  INFO -- default-rhel:   to file /tmp/install.sh.5611/chef-13.7.16-1.el7.x86_64.rpm
+I, [2018-01-29T17:30:41.785913 #51251]  INFO -- default-rhel: trying curl...
+I, [2018-01-29T17:30:42.518887 #51251]  INFO -- default-rhel: Comparing checksum with sha256sum...
+I, [2018-01-29T17:30:42.840211 #51251]  INFO -- default-rhel: 
+I, [2018-01-29T17:30:42.840296 #51251]  INFO -- default-rhel: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-01-29T17:30:42.840321 #51251]  INFO -- default-rhel: 
+I, [2018-01-29T17:30:42.840341 #51251]  INFO -- default-rhel: You are installing an omnibus package without a version pin.  If you are installing
+I, [2018-01-29T17:30:42.840358 #51251]  INFO -- default-rhel: on production servers via an automated process this is DANGEROUS and you will
+I, [2018-01-29T17:30:42.840376 #51251]  INFO -- default-rhel: be upgraded without warning on new releases, even to new major releases.
+I, [2018-01-29T17:30:42.840392 #51251]  INFO -- default-rhel: Letting the version float is only appropriate in desktop, test, development or
+I, [2018-01-29T17:30:42.840408 #51251]  INFO -- default-rhel: CI/CD environments.
+I, [2018-01-29T17:30:42.840424 #51251]  INFO -- default-rhel: 
+I, [2018-01-29T17:30:42.840440 #51251]  INFO -- default-rhel: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-01-29T17:30:42.840455 #51251]  INFO -- default-rhel: 
+I, [2018-01-29T17:30:42.840471 #51251]  INFO -- default-rhel: Installing chef 
+I, [2018-01-29T17:30:42.840486 #51251]  INFO -- default-rhel: installing with rpm...
+I, [2018-01-29T17:30:42.903121 #51251]  INFO -- default-rhel: warning: /tmp/install.sh.5611/chef-13.7.16-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2018-01-29T17:30:43.460756 #51251]  INFO -- default-rhel: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2018-01-29T17:30:43.482915 #51251]  INFO -- default-rhel: Updating / installing...
+I, [2018-01-29T17:30:53.300131 #51251]  INFO -- default-rhel:    1:chef-13.7.16-1.el7                                                 (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2018-01-29T17:30:53.771043 #51251]  INFO -- default-rhel: Thank you for installing Chef!
+I, [2018-01-29T17:30:54.065693 #51251]  INFO -- default-rhel: Transferring files to <default-rhel>
+I, [2018-01-29T17:32:36.886116 #51251]  INFO -- default-rhel: Starting Chef Client, version 13.7.16
+I, [2018-01-29T17:32:38.053438 #51251]  INFO -- default-rhel: Creating a new client identity for default-rhel using the validator key.
+I, [2018-01-29T17:32:38.171868 #51251]  INFO -- default-rhel: resolving cookbooks for run list: ["chef_base::default"]
+I, [2018-01-29T17:32:38.615769 #51251]  INFO -- default-rhel: Synchronizing Cookbooks:
+I, [2018-01-29T17:32:38.615911 #51251]  INFO -- default-rhel:   - chef_base (1.0.0)
+I, [2018-01-29T17:32:38.616064 #51251]  INFO -- default-rhel:   - docker (4.0.0)
+I, [2018-01-29T17:32:38.756479 #51251]  INFO -- default-rhel:   - chef-client (9.0.4)
+I, [2018-01-29T17:32:38.756673 #51251]  INFO -- default-rhel:   - cron (5.0.1)
+I, [2018-01-29T17:32:38.756883 #51251]  INFO -- default-rhel:   - logrotate (2.2.0)
+I, [2018-01-29T17:32:38.757006 #51251]  INFO -- default-rhel:   - windows (3.4.4)
+I, [2018-01-29T17:32:38.757095 #51251]  INFO -- default-rhel:   - ohai (5.2.1)
+I, [2018-01-29T17:32:38.757183 #51251]  INFO -- default-rhel: Installing Cookbook Gems:
+I, [2018-01-29T17:32:42.200270 #51251]  INFO -- default-rhel: Compiling Cookbooks...
+I, [2018-01-29T17:32:42.200562 #51251]  INFO -- default-rhel: Converging 19 resources
+I, [2018-01-29T17:32:42.200595 #51251]  INFO -- default-rhel: Recipe: chef-client::config
+I, [2018-01-29T17:32:42.200704 #51251]  INFO -- default-rhel:   * logrotate_app[chef-client] action enable
+I, [2018-01-29T17:32:42.292641 #51251]  INFO -- default-rhel:     * directory[/etc/logrotate.d] action create (up to date)
+I, [2018-01-29T17:32:42.292797 #51251]  INFO -- default-rhel:     * template[/etc/logrotate.d/chef-client] action create
+I, [2018-01-29T17:32:42.292826 #51251]  INFO -- default-rhel:       - create new file /etc/logrotate.d/chef-client
+I, [2018-01-29T17:32:42.292845 #51251]  INFO -- default-rhel:       - update content in file /etc/logrotate.d/chef-client from none to 92fbea
+I, [2018-01-29T17:32:42.292863 #51251]  INFO -- default-rhel:       --- /etc/logrotate.d/chef-client	2018-01-30 01:32:42.028641815 +0000
+I, [2018-01-29T17:32:42.292879 #51251]  INFO -- default-rhel:       +++ /etc/logrotate.d/.chef-chef-client20180130-10585-1lbom88	2018-01-30 01:32:42.028641815 +0000
+I, [2018-01-29T17:32:42.292895 #51251]  INFO -- default-rhel:       @@ -1 +1,12 @@
+I, [2018-01-29T17:32:42.292910 #51251]  INFO -- default-rhel:       +# This file was generated by Chef for ip-172-31-50-78.ec2.internal.
+I, [2018-01-29T17:32:42.292931 #51251]  INFO -- default-rhel:       +# Do not modify this file by hand!
+I, [2018-01-29T17:32:42.293283 #51251]  INFO -- default-rhel:       +
+I, [2018-01-29T17:32:42.293308 #51251]  INFO -- default-rhel:       +"/var/log/chef/client.log" {
+I, [2018-01-29T17:32:42.293323 #51251]  INFO -- default-rhel:       +  weekly
+I, [2018-01-29T17:32:42.293337 #51251]  INFO -- default-rhel:       +  rotate 12
+I, [2018-01-29T17:32:42.293352 #51251]  INFO -- default-rhel:       +  compress
+I, [2018-01-29T17:32:42.293365 #51251]  INFO -- default-rhel:       +  postrotate
+I, [2018-01-29T17:32:42.293380 #51251]  INFO -- default-rhel:       +    systemctl reload chef-client.service >/dev/null || :
+I, [2018-01-29T17:32:42.293395 #51251]  INFO -- default-rhel:       +  endscript
+I, [2018-01-29T17:32:42.293408 #51251]  INFO -- default-rhel:       +}
+I, [2018-01-29T17:32:42.293422 #51251]  INFO -- default-rhel:       - change mode from '' to '0644'
+I, [2018-01-29T17:32:42.293436 #51251]  INFO -- default-rhel:       - change owner from '' to 'root'
+I, [2018-01-29T17:32:42.319660 #51251]  INFO -- default-rhel:       - change group from '' to 'root'
+I, [2018-01-29T17:32:42.319736 #51251]  INFO -- default-rhel:       - restore selinux security context
+I, [2018-01-29T17:32:42.319758 #51251]  INFO -- default-rhel:   
+I, [2018-01-29T17:32:42.319775 #51251]  INFO -- default-rhel:   * directory[/var/run/chef] action create
+I, [2018-01-29T17:32:42.319790 #51251]  INFO -- default-rhel:     - create new directory /var/run/chef
+I, [2018-01-29T17:32:42.319806 #51251]  INFO -- default-rhel:     - change owner from '' to 'root'
+I, [2018-01-29T17:32:42.319986 #51251]  INFO -- default-rhel:     - change group from '' to 'root'
+I, [2018-01-29T17:32:42.320010 #51251]  INFO -- default-rhel:     - restore selinux security context
+I, [2018-01-29T17:32:42.320028 #51251]  INFO -- default-rhel:   * directory[/var/cache/chef] action create
+I, [2018-01-29T17:32:42.320196 #51251]  INFO -- default-rhel:     - create new directory /var/cache/chef
+I, [2018-01-29T17:32:42.320219 #51251]  INFO -- default-rhel:     - change owner from '' to 'root'
+I, [2018-01-29T17:32:42.320308 #51251]  INFO -- default-rhel:     - change group from '' to 'root'
+I, [2018-01-29T17:32:42.320330 #51251]  INFO -- default-rhel:     - restore selinux security context
+I, [2018-01-29T17:32:42.320347 #51251]  INFO -- default-rhel:   * directory[/var/lib/chef] action create
+I, [2018-01-29T17:32:42.320362 #51251]  INFO -- default-rhel:     - create new directory /var/lib/chef
+I, [2018-01-29T17:32:42.320377 #51251]  INFO -- default-rhel:     - change owner from '' to 'root'
+I, [2018-01-29T17:32:42.320491 #51251]  INFO -- default-rhel:     - change group from '' to 'root'
+I, [2018-01-29T17:32:42.320513 #51251]  INFO -- default-rhel:     - restore selinux security context
+I, [2018-01-29T17:32:42.320530 #51251]  INFO -- default-rhel:   * directory[/var/log/chef] action create
+I, [2018-01-29T17:32:42.320545 #51251]  INFO -- default-rhel:     - create new directory /var/log/chef
+I, [2018-01-29T17:32:42.320611 #51251]  INFO -- default-rhel:     - change mode from '' to '0755'
+I, [2018-01-29T17:32:42.320626 #51251]  INFO -- default-rhel:     - change owner from '' to 'root'
+I, [2018-01-29T17:32:42.320749 #51251]  INFO -- default-rhel:     - change group from '' to 'root'
+I, [2018-01-29T17:32:42.320771 #51251]  INFO -- default-rhel:     - restore selinux security context
+I, [2018-01-29T17:32:42.320788 #51251]  INFO -- default-rhel:   * directory[/etc/chef] action create (up to date)
+I, [2018-01-29T17:32:42.320803 #51251]  INFO -- default-rhel:   * file[/var/log/chef/client.log] action create
+I, [2018-01-29T17:32:42.320818 #51251]  INFO -- default-rhel:     - create new file /var/log/chef/client.log
+I, [2018-01-29T17:32:42.320929 #51251]  INFO -- default-rhel:     - change mode from '' to '0640'
+I, [2018-01-29T17:32:42.320951 #51251]  INFO -- default-rhel:     - restore selinux security context
+I, [2018-01-29T17:32:42.321094 #51251]  INFO -- default-rhel:   * template[/etc/chef/client.rb] action create
+I, [2018-01-29T17:32:42.321117 #51251]  INFO -- default-rhel:     - create new file /etc/chef/client.rb
+I, [2018-01-29T17:32:42.321135 #51251]  INFO -- default-rhel:     - update content in file /etc/chef/client.rb from none to 000015
+I, [2018-01-29T17:32:42.321151 #51251]  INFO -- default-rhel:     --- /etc/chef/client.rb	2018-01-30 01:32:42.181640794 +0000
+I, [2018-01-29T17:32:42.321168 #51251]  INFO -- default-rhel:     +++ /etc/chef/.chef-client20180130-10585-x7jwy1.rb	2018-01-30 01:32:42.181640794 +0000
+I, [2018-01-29T17:32:42.321183 #51251]  INFO -- default-rhel:     @@ -1 +1,15 @@
+I, [2018-01-29T17:32:42.321198 #51251]  INFO -- default-rhel:     +chef_server_url "chefzero://localhost:1"
+I, [2018-01-29T17:32:42.321213 #51251]  INFO -- default-rhel:     +client_fork true
+I, [2018-01-29T17:32:42.321227 #51251]  INFO -- default-rhel:     +log_location "/var/log/chef/client.log"
+I, [2018-01-29T17:32:42.321242 #51251]  INFO -- default-rhel:     +validation_client_name "chef-validator"
+I, [2018-01-29T17:32:42.321269 #51251]  INFO -- default-rhel:     +verify_api_cert true
+I, [2018-01-29T17:32:42.321285 #51251]  INFO -- default-rhel:     +node_name "default-rhel"
+I, [2018-01-29T17:32:42.321299 #51251]  INFO -- default-rhel:     +
+I, [2018-01-29T17:32:42.321313 #51251]  INFO -- default-rhel:     +
+I, [2018-01-29T17:32:42.321327 #51251]  INFO -- default-rhel:     +
+I, [2018-01-29T17:32:42.321341 #51251]  INFO -- default-rhel:     +# Do not crash if a handler is missing / not installed yet
+I, [2018-01-29T17:32:42.321356 #51251]  INFO -- default-rhel:     +begin
+I, [2018-01-29T17:32:42.321370 #51251]  INFO -- default-rhel:     +rescue NameError => e
+I, [2018-01-29T17:32:42.321384 #51251]  INFO -- default-rhel:     +  Chef::Log.error e
+I, [2018-01-29T17:32:42.321397 #51251]  INFO -- default-rhel:     +end
+I, [2018-01-29T17:32:42.321411 #51251]  INFO -- default-rhel:     - change mode from '' to '0644'
+I, [2018-01-29T17:32:42.321425 #51251]  INFO -- default-rhel:     - change owner from '' to 'root'
+I, [2018-01-29T17:32:42.420702 #51251]  INFO -- default-rhel:     - change group from '' to 'root'
+I, [2018-01-29T17:32:42.420782 #51251]  INFO -- default-rhel:     - restore selinux security context
+I, [2018-01-29T17:32:42.420827 #51251]  INFO -- default-rhel:   * ruby_block[reload_client_config] action run
+I, [2018-01-29T17:32:42.420858 #51251]  INFO -- default-rhel:     - execute the ruby block reload_client_config
+I, [2018-01-29T17:32:42.420880 #51251]  INFO -- default-rhel:   * directory[/etc/chef/client.d] action create
+I, [2018-01-29T17:32:42.420980 #51251]  INFO -- default-rhel:     - create new directory /etc/chef/client.d
+I, [2018-01-29T17:32:42.421010 #51251]  INFO -- default-rhel:     - change mode from '' to '0755'
+I, [2018-01-29T17:32:42.421037 #51251]  INFO -- default-rhel:     - change owner from '' to 'root'
+I, [2018-01-29T17:32:42.421276 #51251]  INFO -- default-rhel:     - change group from '' to 'root'
+I, [2018-01-29T17:32:42.421302 #51251]  INFO -- default-rhel:     - restore selinux security context
+I, [2018-01-29T17:32:42.421319 #51251]  INFO -- default-rhel:   * ruby_block[reload_client_config] action nothing (skipped due to action :nothing)
+I, [2018-01-29T17:32:42.421335 #51251]  INFO -- default-rhel: Recipe: chef-client::systemd_service
+I, [2018-01-29T17:32:42.421355 #51251]  INFO -- default-rhel:   * template[/etc/sysconfig/chef-client] action create
+I, [2018-01-29T17:32:42.421370 #51251]  INFO -- default-rhel:     - create new file /etc/sysconfig/chef-client
+I, [2018-01-29T17:32:42.421385 #51251]  INFO -- default-rhel:     - update content in file /etc/sysconfig/chef-client from none to ec7de1
+I, [2018-01-29T17:32:42.421400 #51251]  INFO -- default-rhel:     --- /etc/sysconfig/chef-client	2018-01-30 01:32:42.227640487 +0000
+I, [2018-01-29T17:32:42.421415 #51251]  INFO -- default-rhel:     +++ /etc/sysconfig/.chef-chef-client20180130-10585-6bfeyf	2018-01-30 01:32:42.227640487 +0000
+I, [2018-01-29T17:32:42.421430 #51251]  INFO -- default-rhel:     @@ -1 +1,15 @@
+I, [2018-01-29T17:32:42.421444 #51251]  INFO -- default-rhel:     +# Configuration file for the chef-client service
+I, [2018-01-29T17:32:42.421458 #51251]  INFO -- default-rhel:     +
+I, [2018-01-29T17:32:42.421472 #51251]  INFO -- default-rhel:     +CONFIG=/etc/chef/client.rb
+I, [2018-01-29T17:32:42.421487 #51251]  INFO -- default-rhel:     +PIDFILE=/var/run/chef/client.pid
+I, [2018-01-29T17:32:42.421501 #51251]  INFO -- default-rhel:     +#LOCKFILE=/var/lock/subsys/chef-client
+I, [2018-01-29T17:32:42.421515 #51251]  INFO -- default-rhel:     +# Sleep interval between runs.
+I, [2018-01-29T17:32:42.421590 #51251]  INFO -- default-rhel:     +# This value is in seconds.
+I, [2018-01-29T17:32:42.421605 #51251]  INFO -- default-rhel:     +INTERVAL=1800
+I, [2018-01-29T17:32:42.421619 #51251]  INFO -- default-rhel:     +# Maximum amount of random delay before starting a run. Prevents every client
+I, [2018-01-29T17:32:42.421634 #51251]  INFO -- default-rhel:     +# from contacting the server at the exact same time.
+I, [2018-01-29T17:32:42.421648 #51251]  INFO -- default-rhel:     +# This value is in seconds.
+I, [2018-01-29T17:32:42.421676 #51251]  INFO -- default-rhel:     +SPLAY=300
+I, [2018-01-29T17:32:42.421691 #51251]  INFO -- default-rhel:     +# Any additional chef-client options.
+I, [2018-01-29T17:32:42.422068 #51251]  INFO -- default-rhel:     +OPTIONS=""
+I, [2018-01-29T17:32:42.422157 #51251]  INFO -- default-rhel:     - change mode from '' to '0644'
+I, [2018-01-29T17:32:42.422180 #51251]  INFO -- default-rhel:     - restore selinux security context
+I, [2018-01-29T17:32:42.422198 #51251]  INFO -- default-rhel:   * directory[/etc/systemd/system] action create (up to date)
+I, [2018-01-29T17:32:42.422297 #51251]  INFO -- default-rhel:   * systemd_unit[chef-client.service] action create
+I, [2018-01-29T17:32:42.422319 #51251]  INFO -- default-rhel:   Recipe: <Dynamically Defined Resource>
+I, [2018-01-29T17:32:42.422568 #51251]  INFO -- default-rhel:     * file[/etc/systemd/system/chef-client.service] action create
+I, [2018-01-29T17:32:42.422610 #51251]  INFO -- default-rhel:       - create new file /etc/systemd/system/chef-client.service
+I, [2018-01-29T17:32:42.422632 #51251]  INFO -- default-rhel:       - update content in file /etc/systemd/system/chef-client.service from none to b10dcf
+I, [2018-01-29T17:32:42.422658 #51251]  INFO -- default-rhel:       --- /etc/systemd/system/chef-client.service	2018-01-30 01:32:42.367639552 +0000
+I, [2018-01-29T17:32:42.422677 #51251]  INFO -- default-rhel:       +++ /etc/systemd/system/.chef-chef-client20180130-10585-1ml0z6z.service	2018-01-30 01:32:42.320639866 +0000
+I, [2018-01-29T17:32:42.422693 #51251]  INFO -- default-rhel:       @@ -1 +1,15 @@
+I, [2018-01-29T17:32:42.422708 #51251]  INFO -- default-rhel:       +[Unit]
+I, [2018-01-29T17:32:42.422723 #51251]  INFO -- default-rhel:       +Description = Chef Client daemon
+I, [2018-01-29T17:32:42.422739 #51251]  INFO -- default-rhel:       +After = network.target auditd.service
+I, [2018-01-29T17:32:42.422753 #51251]  INFO -- default-rhel:       +
+I, [2018-01-29T17:32:42.422767 #51251]  INFO -- default-rhel:       +[Service]
+I, [2018-01-29T17:32:42.422785 #51251]  INFO -- default-rhel:       +Type = simple
+I, [2018-01-29T17:32:42.422800 #51251]  INFO -- default-rhel:       +EnvironmentFile = /etc/sysconfig/chef-client
+I, [2018-01-29T17:32:42.422814 #51251]  INFO -- default-rhel:       +ExecStart = /usr/bin/chef-client -c $CONFIG -i $INTERVAL -s $SPLAY $OPTIONS 
+I, [2018-01-29T17:32:42.422830 #51251]  INFO -- default-rhel:       +ExecReload = /bin/kill -HUP $MAINPID
+I, [2018-01-29T17:32:42.422844 #51251]  INFO -- default-rhel:       +SuccessExitStatus = 3
+I, [2018-01-29T17:32:42.422859 #51251]  INFO -- default-rhel:       +Restart = always
+I, [2018-01-29T17:32:42.422873 #51251]  INFO -- default-rhel:       +
+I, [2018-01-29T17:32:42.422887 #51251]  INFO -- default-rhel:       +[Install]
+I, [2018-01-29T17:32:42.422901 #51251]  INFO -- default-rhel:       +WantedBy = multi-user.target
+I, [2018-01-29T17:32:42.422915 #51251]  INFO -- default-rhel:       - change mode from '' to '0644'
+I, [2018-01-29T17:32:42.422932 #51251]  INFO -- default-rhel:       - change owner from '' to 'root'
+I, [2018-01-29T17:32:42.442083 #51251]  INFO -- default-rhel:       - change group from '' to 'root'
+I, [2018-01-29T17:32:42.442157 #51251]  INFO -- default-rhel:       - restore selinux security context
+I, [2018-01-29T17:32:42.512199 #51251]  INFO -- default-rhel:     - creating unit: chef-client.service
+I, [2018-01-29T17:32:42.512262 #51251]  INFO -- default-rhel: Recipe: chef-client::systemd_service
+I, [2018-01-29T17:32:42.618885 #51251]  INFO -- default-rhel:   * service[chef-client] action enable
+I, [2018-01-29T17:32:42.619014 #51251]  INFO -- default-rhel:     - enable service service[chef-client]
+I, [2018-01-29T17:32:42.730216 #51251]  INFO -- default-rhel:   * service[chef-client] action start
+I, [2018-01-29T17:32:42.730281 #51251]  INFO -- default-rhel:     - start service service[chef-client]
+I, [2018-01-29T17:32:42.804554 #51251]  INFO -- default-rhel:   * systemd_unit[chef-client.timer] action stop (up to date)
+I, [2018-01-29T17:32:42.882903 #51251]  INFO -- default-rhel:   * systemd_unit[chef-client.timer] action disable (up to date)
+I, [2018-01-29T17:32:43.280592 #51251]  INFO -- default-rhel:   * systemd_unit[chef-client.timer] action delete (up to date)
+I, [2018-01-29T17:32:43.280667 #51251]  INFO -- default-rhel: Recipe: chef-client::delete_validation
+I, [2018-01-29T17:32:43.280697 #51251]  INFO -- default-rhel:   * file[/tmp/kitchen/validation.pem] action delete
+I, [2018-01-29T17:32:43.280720 #51251]  INFO -- default-rhel:     - delete file /tmp/kitchen/validation.pem
+I, [2018-01-29T17:32:43.280742 #51251]  INFO -- default-rhel: Recipe: chef_base::default
+I, [2018-01-29T17:32:43.281450 #51251]  INFO -- default-rhel:   * docker_service[default] action create
+I, [2018-01-29T17:32:43.281578 #51251]  INFO -- default-rhel:     * docker_installation_script[default] action create
+I, [2018-01-29T17:32:54.945196 #51251]  INFO -- default-rhel:       * yum_package[curl] action install (up to date)
+I, [2018-01-29T17:32:55.211585 #51251]  INFO -- default-rhel:       * execute[install docker] action run
+I, [2018-01-29T17:32:55.211659 #51251]  INFO -- default-rhel:  
+I, [2018-01-29T17:32:55.211690 #51251]  INFO -- default-rhel:  ================================================================================
+I, [2018-01-29T17:32:55.211719 #51251]  INFO -- default-rhel:  Error executing action `run` on resource 'execute[install docker]'
+I, [2018-01-29T17:32:55.211746 #51251]  INFO -- default-rhel:  ================================================================================
+I, [2018-01-29T17:32:55.211773 #51251]  INFO -- default-rhel:  
+I, [2018-01-29T17:32:55.211895 #51251]  INFO -- default-rhel:  Mixlib::ShellOut::ShellCommandFailed
+I, [2018-01-29T17:32:55.211923 #51251]  INFO -- default-rhel:  ------------------------------------
+I, [2018-01-29T17:32:55.211948 #51251]  INFO -- default-rhel:  Expected process to exit with [0], but received '1'
+I, [2018-01-29T17:32:55.211972 #51251]  INFO -- default-rhel:  ---- Begin output of curl -sSL https://get.docker.com/ | sh ----
+I, [2018-01-29T17:32:55.212000 #51251]  INFO -- default-rhel:  STDOUT: # Executing docker install script, commit: 1d31602
+I, [2018-01-29T17:32:55.212022 #51251]  INFO -- default-rhel:  
+I, [2018-01-29T17:32:55.212040 #51251]  INFO -- default-rhel:  
+I, [2018-01-29T17:32:55.212059 #51251]  INFO -- default-rhel:    WARNING: rhel is now only supported by Docker EE
+I, [2018-01-29T17:32:55.212081 #51251]  INFO -- default-rhel:             Check https://store.docker.com for information on Docker EE
+I, [2018-01-29T17:32:55.212099 #51251]  INFO -- default-rhel:  STDERR: 
+I, [2018-01-29T17:32:55.212117 #51251]  INFO -- default-rhel:  ---- End output of curl -sSL https://get.docker.com/ | sh ----
+I, [2018-01-29T17:32:55.212136 #51251]  INFO -- default-rhel:  Ran curl -sSL https://get.docker.com/ | sh returned 1
+I, [2018-01-29T17:32:55.212157 #51251]  INFO -- default-rhel:  
+I, [2018-01-29T17:32:55.212174 #51251]  INFO -- default-rhel:  Resource Declaration:
+I, [2018-01-29T17:32:55.212192 #51251]  INFO -- default-rhel:  ---------------------
+I, [2018-01-29T17:32:55.212209 #51251]  INFO -- default-rhel:  # In /tmp/kitchen/cache/cookbooks/docker/libraries/docker_installation_script.rb
+I, [2018-01-29T17:32:55.212230 #51251]  INFO -- default-rhel:  
+I, [2018-01-29T17:32:55.212249 #51251]  INFO -- default-rhel:   37:       execute 'install docker' do
+I, [2018-01-29T17:32:55.212267 #51251]  INFO -- default-rhel:   38:         command "curl -sSL #{new_resource.script_url} | sh"
+I, [2018-01-29T17:32:55.212286 #51251]  INFO -- default-rhel:   39:         creates '/usr/bin/docker'
+I, [2018-01-29T17:32:55.212306 #51251]  INFO -- default-rhel:   40:       end
+I, [2018-01-29T17:32:55.212324 #51251]  INFO -- default-rhel:   41:     end
+I, [2018-01-29T17:32:55.212342 #51251]  INFO -- default-rhel:  
+I, [2018-01-29T17:32:55.212399 #51251]  INFO -- default-rhel:  Compiled Resource:
+I, [2018-01-29T17:32:55.212418 #51251]  INFO -- default-rhel:  ------------------
+I, [2018-01-29T17:32:55.212456 #51251]  INFO -- default-rhel:  # Declared in /tmp/kitchen/cache/cookbooks/docker/libraries/docker_installation_script.rb:37:in `block in <class:DockerInstallationScript>'
+I, [2018-01-29T17:32:55.212476 #51251]  INFO -- default-rhel:  
+I, [2018-01-29T17:32:55.212496 #51251]  INFO -- default-rhel:  execute("install docker") do
+I, [2018-01-29T17:32:55.212515 #51251]  INFO -- default-rhel:    action [:run]
+I, [2018-01-29T17:32:55.212535 #51251]  INFO -- default-rhel:    default_guard_interpreter :execute
+I, [2018-01-29T17:32:55.212554 #51251]  INFO -- default-rhel:    command "curl -sSL https://get.docker.com/ | sh"
+I, [2018-01-29T17:32:55.212571 #51251]  INFO -- default-rhel:    backup 5
+I, [2018-01-29T17:32:55.212591 #51251]  INFO -- default-rhel:    creates "/usr/bin/docker"
+I, [2018-01-29T17:32:55.212609 #51251]  INFO -- default-rhel:    returns 0
+I, [2018-01-29T17:32:55.212632 #51251]  INFO -- default-rhel:    user nil
+I, [2018-01-29T17:32:55.212650 #51251]  INFO -- default-rhel:    declared_type :execute
+I, [2018-01-29T17:32:55.212667 #51251]  INFO -- default-rhel:    cookbook_name "chef_base"
+I, [2018-01-29T17:32:55.212687 #51251]  INFO -- default-rhel:    domain nil
+I, [2018-01-29T17:32:55.212707 #51251]  INFO -- default-rhel:  end
+I, [2018-01-29T17:32:55.212724 #51251]  INFO -- default-rhel:  
+I, [2018-01-29T17:32:55.212744 #51251]  INFO -- default-rhel:  System Info:
+I, [2018-01-29T17:32:55.212761 #51251]  INFO -- default-rhel:  ------------
+I, [2018-01-29T17:32:55.212778 #51251]  INFO -- default-rhel:  chef_version=13.7.16
+I, [2018-01-29T17:32:55.212801 #51251]  INFO -- default-rhel:  platform=redhat
+I, [2018-01-29T17:32:55.212819 #51251]  INFO -- default-rhel:  platform_version=7.4
+I, [2018-01-29T17:32:55.212875 #51251]  INFO -- default-rhel:  ruby=ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]
+I, [2018-01-29T17:32:55.212898 #51251]  INFO -- default-rhel:  program_name=chef-client worker: ppid=10580;start=01:32:36;
+I, [2018-01-29T17:32:55.212920 #51251]  INFO -- default-rhel:  executable=/opt/chef/bin/chef-client
+I, [2018-01-29T17:32:55.212937 #51251]  INFO -- default-rhel:  
+I, [2018-01-29T17:32:55.212952 #51251]  INFO -- default-rhel:       
+I, [2018-01-29T17:32:55.212966 #51251]  INFO -- default-rhel:       ================================================================================
+I, [2018-01-29T17:32:55.212984 #51251]  INFO -- default-rhel:       Error executing action `create` on resource 'docker_installation_script[default]'
+I, [2018-01-29T17:32:55.212999 #51251]  INFO -- default-rhel:       ================================================================================
+I, [2018-01-29T17:32:55.213013 #51251]  INFO -- default-rhel:       
+I, [2018-01-29T17:32:55.213029 #51251]  INFO -- default-rhel:       Mixlib::ShellOut::ShellCommandFailed
+I, [2018-01-29T17:32:55.213047 #51251]  INFO -- default-rhel:       ------------------------------------
+I, [2018-01-29T17:32:55.213062 #51251]  INFO -- default-rhel:       execute[install docker] (/tmp/kitchen/cache/cookbooks/docker/libraries/docker_installation_script.rb line 37) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+I, [2018-01-29T17:32:55.213076 #51251]  INFO -- default-rhel:       ---- Begin output of curl -sSL https://get.docker.com/ | sh ----
+I, [2018-01-29T17:32:55.213091 #51251]  INFO -- default-rhel:       STDOUT: # Executing docker install script, commit: 1d31602
+I, [2018-01-29T17:32:55.213105 #51251]  INFO -- default-rhel:       
+I, [2018-01-29T17:32:55.213118 #51251]  INFO -- default-rhel:       
+I, [2018-01-29T17:32:55.213139 #51251]  INFO -- default-rhel:  WARNING: rhel is now only supported by Docker EE
+I, [2018-01-29T17:32:55.213158 #51251]  INFO -- default-rhel:           Check https://store.docker.com for information on Docker EE
+I, [2018-01-29T17:32:55.213172 #51251]  INFO -- default-rhel:       STDERR: 
+I, [2018-01-29T17:32:55.213186 #51251]  INFO -- default-rhel:       ---- End output of curl -sSL https://get.docker.com/ | sh ----
+I, [2018-01-29T17:32:55.213208 #51251]  INFO -- default-rhel:       Ran curl -sSL https://get.docker.com/ | sh returned 1
+I, [2018-01-29T17:32:55.213224 #51251]  INFO -- default-rhel:       
+I, [2018-01-29T17:32:55.213238 #51251]  INFO -- default-rhel:       Resource Declaration:
+I, [2018-01-29T17:32:55.213254 #51251]  INFO -- default-rhel:       ---------------------
+I, [2018-01-29T17:32:55.213269 #51251]  INFO -- default-rhel:       # In /tmp/kitchen/cache/cookbooks/docker/libraries/docker_service.rb
+I, [2018-01-29T17:32:55.213283 #51251]  INFO -- default-rhel:       
+I, [2018-01-29T17:32:55.213303 #51251]  INFO -- default-rhel: 57:           install = docker_installation(new_resource.name, &block)
+I, [2018-01-29T17:32:55.213321 #51251]  INFO -- default-rhel: 58:         when 'script'
+I, [2018-01-29T17:32:55.213339 #51251]  INFO -- default-rhel: 59:           install = docker_installation_script(new_resource.name, &block)
+I, [2018-01-29T17:32:55.213359 #51251]  INFO -- default-rhel: 60:         when 'package'
+I, [2018-01-29T17:32:55.213409 #51251]  INFO -- default-rhel: 61:           install = docker_installation_package(new_resource.name, &block)
+I, [2018-01-29T17:32:55.213431 #51251]  INFO -- default-rhel: 62:         when 'tarball'
+I, [2018-01-29T17:32:55.213449 #51251]  INFO -- default-rhel: 63:           install = docker_installation_tarball(new_resource.name, &block)
+I, [2018-01-29T17:32:55.213466 #51251]  INFO -- default-rhel: 64:         when 'none'
+I, [2018-01-29T17:32:55.213487 #51251]  INFO -- default-rhel: 65:           Chef::Log.info('Skipping Docker installation. Assuming it was handled previously.')
+I, [2018-01-29T17:32:55.213505 #51251]  INFO -- default-rhel: 66:           return
+I, [2018-01-29T17:32:55.213522 #51251]  INFO -- default-rhel: 67:         end
+I, [2018-01-29T17:32:55.213539 #51251]  INFO -- default-rhel: 68:         copy_properties_to(install)
+I, [2018-01-29T17:32:55.213558 #51251]  INFO -- default-rhel: 69:         install
+I, [2018-01-29T17:32:55.309424 #51251]  INFO -- default-rhel: 70:       end
+I, [2018-01-29T17:32:55.309489 #51251]  INFO -- default-rhel: 71: 
+I, [2018-01-29T17:32:55.309514 #51251]  INFO -- default-rhel: 72:       def svc_manager(&block)
+I, [2018-01-29T17:32:55.309541 #51251]  INFO -- default-rhel: 73:         case new_resource.service_manager
+I, [2018-01-29T17:32:55.309583 #51251]  INFO -- default-rhel: 74:         when 'auto'
+I, [2018-01-29T17:32:55.309614 #51251]  INFO -- default-rhel: 75:           svc = docker_service_manager(new_resource.name, &block)
+I, [2018-01-29T17:32:55.309646 #51251]  INFO -- default-rhel: 76:         when 'execute'
+I, [2018-01-29T17:32:55.309680 #51251]  INFO -- default-rhel: 77:           svc = docker_service_manager_execute(new_resource.name, &block)
+I, [2018-01-29T17:32:55.309711 #51251]  INFO -- default-rhel: 78:         when 'sysvinit'
+I, [2018-01-29T17:32:55.309741 #51251]  INFO -- default-rhel: 79:           svc = docker_service_manager_sysvinit(new_resource.name, &block)
+I, [2018-01-29T17:32:55.309774 #51251]  INFO -- default-rhel: 80:         when 'upstart'
+I, [2018-01-29T17:32:55.309803 #51251]  INFO -- default-rhel: 81:           svc = docker_service_manager_upstart(new_resource.name, &block)
+I, [2018-01-29T17:32:55.309843 #51251]  INFO -- default-rhel: 82:         when 'systemd'
+I, [2018-01-29T17:32:55.309864 #51251]  INFO -- default-rhel: 83:           svc = docker_service_manager_systemd(new_resource.name, &block)
+I, [2018-01-29T17:32:55.309884 #51251]  INFO -- default-rhel: 84:         end
+I, [2018-01-29T17:32:55.309903 #51251]  INFO -- default-rhel: 85:         copy_properties_to(svc)
+I, [2018-01-29T17:32:55.309921 #51251]  INFO -- default-rhel: 86:         svc
+I, [2018-01-29T17:32:55.309939 #51251]  INFO -- default-rhel: 87:       end
+I, [2018-01-29T17:32:55.309956 #51251]  INFO -- default-rhel: 88:     end
+I, [2018-01-29T17:32:55.310007 #51251]  INFO -- default-rhel: 89: 
+I, [2018-01-29T17:32:55.310034 #51251]  INFO -- default-rhel: 90:     #########
+I, [2018-01-29T17:32:55.310124 #51251]  INFO -- default-rhel: 91:     # Actions
+I, [2018-01-29T17:32:55.310156 #51251]  INFO -- default-rhel: 92:     #########
+I, [2018-01-29T17:32:55.310175 #51251]  INFO -- default-rhel: 93: 
+I, [2018-01-29T17:32:55.310192 #51251]  INFO -- default-rhel: 94:     action :create do
+I, [2018-01-29T17:32:55.310212 #51251]  INFO -- default-rhel: 95:       validate_install_method
+I, [2018-01-29T17:32:55.310229 #51251]  INFO -- default-rhel: 96: 
+I, [2018-01-29T17:32:55.310246 #51251]  INFO -- default-rhel: 97:       installation do
+I, [2018-01-29T17:32:55.310264 #51251]  INFO -- default-rhel: 98:         action :create
+I, [2018-01-29T17:32:55.310282 #51251]  INFO -- default-rhel: 99:         notifies :restart, new_resource, :immediately
+I, [2018-01-29T17:32:55.310300 #51251]  INFO -- default-rhel:       100:       end
+I, [2018-01-29T17:32:55.310314 #51251]  INFO -- default-rhel:       101:     end
+I, [2018-01-29T17:32:55.310328 #51251]  INFO -- default-rhel:       102: 
+I, [2018-01-29T17:32:55.310342 #51251]  INFO -- default-rhel:       103:     action :delete do
+I, [2018-01-29T17:32:55.310355 #51251]  INFO -- default-rhel:       104:       installation do
+I, [2018-01-29T17:32:55.310368 #51251]  INFO -- default-rhel:       105:         action :delete
+I, [2018-01-29T17:32:55.310385 #51251]  INFO -- default-rhel:       106:       end
+I, [2018-01-29T17:32:55.310398 #51251]  INFO -- default-rhel:       107:     end
+I, [2018-01-29T17:32:55.310411 #51251]  INFO -- default-rhel:       108: 
+I, [2018-01-29T17:32:55.310424 #51251]  INFO -- default-rhel:       109:     action :start do
+I, [2018-01-29T17:32:55.310437 #51251]  INFO -- default-rhel:       
+I, [2018-01-29T17:32:55.310450 #51251]  INFO -- default-rhel:       Compiled Resource:
+I, [2018-01-29T17:32:55.310463 #51251]  INFO -- default-rhel:       ------------------
+I, [2018-01-29T17:32:55.310476 #51251]  INFO -- default-rhel:       # Declared in /tmp/kitchen/cache/cookbooks/docker/libraries/docker_service.rb:57:in `installation'
+I, [2018-01-29T17:32:55.310490 #51251]  INFO -- default-rhel:       
+I, [2018-01-29T17:32:55.310503 #51251]  INFO -- default-rhel:       docker_installation_script("default") do
+I, [2018-01-29T17:32:55.310519 #51251]  INFO -- default-rhel:  action [:create]
+I, [2018-01-29T17:32:55.310536 #51251]  INFO -- default-rhel:  default_guard_interpreter :default
+I, [2018-01-29T17:32:55.310553 #51251]  INFO -- default-rhel:  declared_type :docker_installation
+I, [2018-01-29T17:32:55.310569 #51251]  INFO -- default-rhel:  cookbook_name "chef_base"
+I, [2018-01-29T17:32:55.310668 #51251]  INFO -- default-rhel:  script_url "https://get.docker.com/"
+I, [2018-01-29T17:32:55.310683 #51251]  INFO -- default-rhel:       end
+I, [2018-01-29T17:32:55.310696 #51251]  INFO -- default-rhel:       
+I, [2018-01-29T17:32:55.310709 #51251]  INFO -- default-rhel:       System Info:
+I, [2018-01-29T17:32:55.310721 #51251]  INFO -- default-rhel:       ------------
+I, [2018-01-29T17:32:55.310734 #51251]  INFO -- default-rhel:       chef_version=13.7.16
+I, [2018-01-29T17:32:55.310747 #51251]  INFO -- default-rhel:       platform=redhat
+I, [2018-01-29T17:32:55.310760 #51251]  INFO -- default-rhel:       platform_version=7.4
+I, [2018-01-29T17:32:55.310772 #51251]  INFO -- default-rhel:       ruby=ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]
+I, [2018-01-29T17:32:55.310786 #51251]  INFO -- default-rhel:       program_name=chef-client worker: ppid=10580;start=01:32:36;
+I, [2018-01-29T17:32:55.310799 #51251]  INFO -- default-rhel:       executable=/opt/chef/bin/chef-client
+I, [2018-01-29T17:32:55.310813 #51251]  INFO -- default-rhel:       
+I, [2018-01-29T17:32:55.311830 #51251]  INFO -- default-rhel:     
+I, [2018-01-29T17:32:55.311865 #51251]  INFO -- default-rhel:     ================================================================================
+I, [2018-01-29T17:32:55.311884 #51251]  INFO -- default-rhel:     Error executing action `create` on resource 'docker_service[default]'
+I, [2018-01-29T17:32:55.311921 #51251]  INFO -- default-rhel:     ================================================================================
+I, [2018-01-29T17:32:55.311944 #51251]  INFO -- default-rhel:     
+I, [2018-01-29T17:32:55.311961 #51251]  INFO -- default-rhel:     Mixlib::ShellOut::ShellCommandFailed
+I, [2018-01-29T17:32:55.311977 #51251]  INFO -- default-rhel:     ------------------------------------
+I, [2018-01-29T17:32:55.311992 #51251]  INFO -- default-rhel:     docker_installation_script[default] (/tmp/kitchen/cache/cookbooks/docker/libraries/docker_service.rb line 57) had an error: Mixlib::ShellOut::ShellCommandFailed: execute[install docker] (/tmp/kitchen/cache/cookbooks/docker/libraries/docker_installation_script.rb line 37) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+I, [2018-01-29T17:32:55.312007 #51251]  INFO -- default-rhel:     ---- Begin output of curl -sSL https://get.docker.com/ | sh ----
+I, [2018-01-29T17:32:55.312022 #51251]  INFO -- default-rhel:     STDOUT: # Executing docker install script, commit: 1d31602
+I, [2018-01-29T17:32:55.312039 #51251]  INFO -- default-rhel:     
+I, [2018-01-29T17:32:55.312053 #51251]  INFO -- default-rhel:     
+I, [2018-01-29T17:32:55.312068 #51251]  INFO -- default-rhel:       WARNING: rhel is now only supported by Docker EE
+I, [2018-01-29T17:32:55.312088 #51251]  INFO -- default-rhel:         Check https://store.docker.com for information on Docker EE
+I, [2018-01-29T17:32:55.312104 #51251]  INFO -- default-rhel:     STDERR: 
+I, [2018-01-29T17:32:55.312118 #51251]  INFO -- default-rhel:     ---- End output of curl -sSL https://get.docker.com/ | sh ----
+I, [2018-01-29T17:32:55.312133 #51251]  INFO -- default-rhel:     Ran curl -sSL https://get.docker.com/ | sh returned 1
+I, [2018-01-29T17:32:55.312148 #51251]  INFO -- default-rhel:     
+I, [2018-01-29T17:32:55.312161 #51251]  INFO -- default-rhel:     Resource Declaration:
+I, [2018-01-29T17:32:55.312214 #51251]  INFO -- default-rhel:     ---------------------
+I, [2018-01-29T17:32:55.312229 #51251]  INFO -- default-rhel:     # In /tmp/kitchen/cache/cookbooks/chef_base/recipes/default.rb
+I, [2018-01-29T17:32:55.312243 #51251]  INFO -- default-rhel:     
+I, [2018-01-29T17:32:55.312256 #51251]  INFO -- default-rhel:      10: docker_service 'default' do
+I, [2018-01-29T17:32:55.312270 #51251]  INFO -- default-rhel:      11:   group 'dockerroot'
+I, [2018-01-29T17:32:55.312286 #51251]  INFO -- default-rhel:      12:   action [:create, :start]
+I, [2018-01-29T17:32:55.312300 #51251]  INFO -- default-rhel:      13: end
+I, [2018-01-29T17:32:55.312312 #51251]  INFO -- default-rhel:      14: 
+I, [2018-01-29T17:32:55.312328 #51251]  INFO -- default-rhel:     
+I, [2018-01-29T17:32:55.312341 #51251]  INFO -- default-rhel:     Compiled Resource:
+I, [2018-01-29T17:32:55.312354 #51251]  INFO -- default-rhel:     ------------------
+I, [2018-01-29T17:32:55.312367 #51251]  INFO -- default-rhel:     # Declared in /tmp/kitchen/cache/cookbooks/chef_base/recipes/default.rb:10:in `from_file'
+I, [2018-01-29T17:32:55.312383 #51251]  INFO -- default-rhel:     
+I, [2018-01-29T17:32:55.312396 #51251]  INFO -- default-rhel:     docker_service("default") do
+I, [2018-01-29T17:32:55.312409 #51251]  INFO -- default-rhel:       action [:create, :start]
+I, [2018-01-29T17:32:55.312422 #51251]  INFO -- default-rhel:       default_guard_interpreter :default
+I, [2018-01-29T17:32:55.312437 #51251]  INFO -- default-rhel:       declared_type :docker_service
+I, [2018-01-29T17:32:55.312450 #51251]  INFO -- default-rhel:       cookbook_name "chef_base"
+I, [2018-01-29T17:32:55.312463 #51251]  INFO -- default-rhel:       recipe_name "default"
+I, [2018-01-29T17:32:55.312476 #51251]  INFO -- default-rhel:       group "dockerroot"
+I, [2018-01-29T17:32:55.312491 #51251]  INFO -- default-rhel:       pidfile "/var/run/docker.pid"
+I, [2018-01-29T17:32:55.312504 #51251]  INFO -- default-rhel:     end
+I, [2018-01-29T17:32:55.312517 #51251]  INFO -- default-rhel:     
+I, [2018-01-29T17:32:55.312529 #51251]  INFO -- default-rhel:     System Info:
+I, [2018-01-29T17:32:55.312542 #51251]  INFO -- default-rhel:     ------------
+I, [2018-01-29T17:32:55.312555 #51251]  INFO -- default-rhel:     chef_version=13.7.16
+I, [2018-01-29T17:32:55.312575 #51251]  INFO -- default-rhel:     platform=redhat
+I, [2018-01-29T17:32:55.312589 #51251]  INFO -- default-rhel:     platform_version=7.4
+I, [2018-01-29T17:32:55.312603 #51251]  INFO -- default-rhel:     ruby=ruby 2.4.3p205 (2017-12-14 revision 61247) [x86_64-linux]
+I, [2018-01-29T17:32:55.312616 #51251]  INFO -- default-rhel:     program_name=chef-client worker: ppid=10580;start=01:32:36;
+I, [2018-01-29T17:32:55.312629 #51251]  INFO -- default-rhel:     executable=/opt/chef/bin/chef-client
+I, [2018-01-29T17:32:55.312642 #51251]  INFO -- default-rhel:     
+I, [2018-01-29T17:32:55.312655 #51251]  INFO -- default-rhel: Recipe: chef-client::systemd_service
+I, [2018-01-29T17:32:55.404118 #51251]  INFO -- default-rhel:   * service[chef-client] action restart
+I, [2018-01-29T17:32:55.404181 #51251]  INFO -- default-rhel:     - restart service service[chef-client]
+I, [2018-01-29T17:32:55.404205 #51251]  INFO -- default-rhel: 
+I, [2018-01-29T17:32:55.404225 #51251]  INFO -- default-rhel: Running handlers:
+I, [2018-01-29T17:32:55.404243 #51251]  INFO -- default-rhel: [2018-01-30T01:32:55+00:00] ERROR: Running exception handlers
+I, [2018-01-29T17:32:55.404262 #51251]  INFO -- default-rhel: Running handlers complete
+I, [2018-01-29T17:32:55.404279 #51251]  INFO -- default-rhel: [2018-01-30T01:32:55+00:00] ERROR: Exception handlers complete
+I, [2018-01-29T17:32:55.404296 #51251]  INFO -- default-rhel: Chef Client failed. 17 resources updated in 18 seconds
+I, [2018-01-29T17:32:55.404314 #51251]  INFO -- default-rhel: [2018-01-30T01:32:55+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2018-01-29T17:32:55.404331 #51251]  INFO -- default-rhel: [2018-01-30T01:32:55+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2018-01-29T17:32:55.404349 #51251]  INFO -- default-rhel: [2018-01-30T01:32:55+00:00] ERROR: docker_service[default] (chef_base::default line 10) had an error: Mixlib::ShellOut::ShellCommandFailed: docker_installation_script[default] (/tmp/kitchen/cache/cookbooks/docker/libraries/docker_service.rb line 57) had an error: Mixlib::ShellOut::ShellCommandFailed: execute[install docker] (/tmp/kitchen/cache/cookbooks/docker/libraries/docker_installation_script.rb line 37) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+I, [2018-01-29T17:32:55.404367 #51251]  INFO -- default-rhel: ---- Begin output of curl -sSL https://get.docker.com/ | sh ----
+I, [2018-01-29T17:32:55.404384 #51251]  INFO -- default-rhel: STDOUT: # Executing docker install script, commit: 1d31602
+I, [2018-01-29T17:32:55.404400 #51251]  INFO -- default-rhel: 
+I, [2018-01-29T17:32:55.404417 #51251]  INFO -- default-rhel: 
+I, [2018-01-29T17:32:55.404433 #51251]  INFO -- default-rhel:   WARNING: rhel is now only supported by Docker EE
+I, [2018-01-29T17:32:55.404460 #51251]  INFO -- default-rhel:     Check https://store.docker.com for information on Docker EE
+I, [2018-01-29T17:32:55.404478 #51251]  INFO -- default-rhel: STDERR: 
+I, [2018-01-29T17:32:55.404495 #51251]  INFO -- default-rhel: ---- End output of curl -sSL https://get.docker.com/ | sh ----
+I, [2018-01-29T17:32:55.404511 #51251]  INFO -- default-rhel: Ran curl -sSL https://get.docker.com/ | sh returned 1
+I, [2018-01-29T17:32:55.404882 #51251]  INFO -- default-rhel: [2018-01-30T01:32:55+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2018-01-29T17:32:55.433786 #51251] ERROR -- default-rhel: Converge failed on instance <default-rhel>.
+E, [2018-01-29T17:32:55.433892 #51251] ERROR -- default-rhel: ------Exception-------
+E, [2018-01-29T17:32:55.433911 #51251] ERROR -- default-rhel: Class: Kitchen::ActionFailed
+E, [2018-01-29T17:32:55.433922 #51251] ERROR -- default-rhel: Message: SSH exited (1) for command: [sh -c '
 TEST_KITCHEN="1"; export TEST_KITCHEN
 sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
 ']
-E, [2018-01-29T08:53:29.736004 #57854] ERROR -- default-rhel: ----------------------
-E, [2018-01-29T08:53:29.736012 #57854] ERROR -- default-rhel: ------Backtrace-------
-E, [2018-01-29T08:53:29.736051 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/provisioner/base.rb:83:in `rescue in call'
-E, [2018-01-29T08:53:29.736061 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/provisioner/base.rb:86:in `call'
-E, [2018-01-29T08:53:29.736069 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:393:in `block in converge_action'
-E, [2018-01-29T08:53:29.736078 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:536:in `synchronize_or_call'
-E, [2018-01-29T08:53:29.736099 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:498:in `block in action'
-E, [2018-01-29T08:53:29.736126 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
-E, [2018-01-29T08:53:29.736135 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:497:in `action'
-E, [2018-01-29T08:53:29.736156 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:389:in `converge_action'
-E, [2018-01-29T08:53:29.736184 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:368:in `block in transition_to'
-E, [2018-01-29T08:53:29.736192 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:367:in `each'
-E, [2018-01-29T08:53:29.736214 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:367:in `transition_to'
-E, [2018-01-29T08:53:29.736222 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:157:in `verify'
-E, [2018-01-29T08:53:29.736230 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:186:in `block in test'
-E, [2018-01-29T08:53:29.736238 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
-E, [2018-01-29T08:53:29.736264 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:182:in `test'
-E, [2018-01-29T08:53:29.736273 #57854] ERROR -- default-rhel: /Users/ujwaly/Development/cookbook_base/cookbooks/chef_base/Rakefile:31:in `block (2 levels) in <top (required)>'
-E, [2018-01-29T08:53:29.736281 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/delegate.rb:83:in `each'
-E, [2018-01-29T08:53:29.736302 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/delegate.rb:83:in `method_missing'
-E, [2018-01-29T08:53:29.736324 #57854] ERROR -- default-rhel: /Users/ujwaly/Development/cookbook_base/cookbooks/chef_base/Rakefile:30:in `block in <top (required)>'
-E, [2018-01-29T08:53:29.736333 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:251:in `block in execute'
-E, [2018-01-29T08:53:29.736341 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:251:in `each'
-E, [2018-01-29T08:53:29.736353 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:251:in `execute'
-E, [2018-01-29T08:53:29.736362 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:195:in `block in invoke_with_call_chain'
-E, [2018-01-29T08:53:29.736371 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
-E, [2018-01-29T08:53:29.736379 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:188:in `invoke_with_call_chain'
-E, [2018-01-29T08:53:29.736387 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:181:in `invoke'
-E, [2018-01-29T08:53:29.736395 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:160:in `invoke_task'
-E, [2018-01-29T08:53:29.736403 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:116:in `block (2 levels) in top_level'
-E, [2018-01-29T08:53:29.736411 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:116:in `each'
-E, [2018-01-29T08:53:29.736419 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:116:in `block in top_level'
-E, [2018-01-29T08:53:29.736427 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:125:in `run_with_threads'
-E, [2018-01-29T08:53:29.736435 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:110:in `top_level'
-E, [2018-01-29T08:53:29.736443 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:83:in `block in run'
-E, [2018-01-29T08:53:29.736451 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:186:in `standard_exception_handling'
-E, [2018-01-29T08:53:29.736459 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:80:in `run'
-E, [2018-01-29T08:53:29.736467 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
-E, [2018-01-29T08:53:29.736476 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/bin/rake:23:in `load'
-E, [2018-01-29T08:53:29.736484 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/bin/rake:23:in `<main>'
-E, [2018-01-29T08:53:29.736492 #57854] ERROR -- default-rhel: ----End Backtrace-----
-E, [2018-01-29T08:53:29.736500 #57854] ERROR -- default-rhel: ---Nested Exception---
-E, [2018-01-29T08:53:29.736508 #57854] ERROR -- default-rhel: Class: Kitchen::Transport::SshFailed
-E, [2018-01-29T08:53:29.736516 #57854] ERROR -- default-rhel: Message: SSH exited (1) for command: [sh -c '
+E, [2018-01-29T17:32:55.433939 #51251] ERROR -- default-rhel: ----------------------
+E, [2018-01-29T17:32:55.433949 #51251] ERROR -- default-rhel: ------Backtrace-------
+E, [2018-01-29T17:32:55.433958 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/provisioner/base.rb:83:in `rescue in call'
+E, [2018-01-29T17:32:55.433968 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/provisioner/base.rb:86:in `call'
+E, [2018-01-29T17:32:55.433977 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:393:in `block in converge_action'
+E, [2018-01-29T17:32:55.433986 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:536:in `synchronize_or_call'
+E, [2018-01-29T17:32:55.433995 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:498:in `block in action'
+E, [2018-01-29T17:32:55.434004 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2018-01-29T17:32:55.434013 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:497:in `action'
+E, [2018-01-29T17:32:55.434022 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:389:in `converge_action'
+E, [2018-01-29T17:32:55.434031 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:368:in `block in transition_to'
+E, [2018-01-29T17:32:55.434040 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:367:in `each'
+E, [2018-01-29T17:32:55.434049 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:367:in `transition_to'
+E, [2018-01-29T17:32:55.434058 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:157:in `verify'
+E, [2018-01-29T17:32:55.434067 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:186:in `block in test'
+E, [2018-01-29T17:32:55.434076 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2018-01-29T17:32:55.434085 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:182:in `test'
+E, [2018-01-29T17:32:55.434094 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-01-29T17:32:55.434103 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-01-29T17:32:55.434113 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-01-29T17:32:55.434121 #51251] ERROR -- default-rhel: ----End Backtrace-----
+E, [2018-01-29T17:32:55.434130 #51251] ERROR -- default-rhel: ---Nested Exception---
+E, [2018-01-29T17:32:55.434138 #51251] ERROR -- default-rhel: Class: Kitchen::Transport::SshFailed
+E, [2018-01-29T17:32:55.434147 #51251] ERROR -- default-rhel: Message: SSH exited (1) for command: [sh -c '
 TEST_KITCHEN="1"; export TEST_KITCHEN
 sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
 ']
-E, [2018-01-29T08:53:29.736524 #57854] ERROR -- default-rhel: ----------------------
-E, [2018-01-29T08:53:29.736532 #57854] ERROR -- default-rhel: ------Backtrace-------
-E, [2018-01-29T08:53:29.736540 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/provisioner/base.rb:83:in `rescue in call'
-E, [2018-01-29T08:53:29.736549 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/provisioner/base.rb:86:in `call'
-E, [2018-01-29T08:53:29.736557 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:393:in `block in converge_action'
-E, [2018-01-29T08:53:29.736565 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:536:in `synchronize_or_call'
-E, [2018-01-29T08:53:29.736577 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:498:in `block in action'
-E, [2018-01-29T08:53:29.736586 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
-E, [2018-01-29T08:53:29.736594 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:497:in `action'
-E, [2018-01-29T08:53:29.736602 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:389:in `converge_action'
-E, [2018-01-29T08:53:29.736611 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:368:in `block in transition_to'
-E, [2018-01-29T08:53:29.736619 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:367:in `each'
-E, [2018-01-29T08:53:29.736627 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:367:in `transition_to'
-E, [2018-01-29T08:53:29.736635 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:157:in `verify'
-E, [2018-01-29T08:53:29.736643 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:186:in `block in test'
-E, [2018-01-29T08:53:29.736651 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
-E, [2018-01-29T08:53:29.736660 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:182:in `test'
-E, [2018-01-29T08:53:29.736668 #57854] ERROR -- default-rhel: /Users/ujwaly/Development/cookbook_base/cookbooks/chef_base/Rakefile:31:in `block (2 levels) in <top (required)>'
-E, [2018-01-29T08:53:29.736676 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/delegate.rb:83:in `each'
-E, [2018-01-29T08:53:29.736684 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/delegate.rb:83:in `method_missing'
-E, [2018-01-29T08:53:29.736692 #57854] ERROR -- default-rhel: /Users/ujwaly/Development/cookbook_base/cookbooks/chef_base/Rakefile:30:in `block in <top (required)>'
-E, [2018-01-29T08:53:29.736700 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:251:in `block in execute'
-E, [2018-01-29T08:53:29.736709 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:251:in `each'
-E, [2018-01-29T08:53:29.736717 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:251:in `execute'
-E, [2018-01-29T08:53:29.736754 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:195:in `block in invoke_with_call_chain'
-E, [2018-01-29T08:53:29.736763 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/monitor.rb:214:in `mon_synchronize'
-E, [2018-01-29T08:53:29.736771 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:188:in `invoke_with_call_chain'
-E, [2018-01-29T08:53:29.736779 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/task.rb:181:in `invoke'
-E, [2018-01-29T08:53:29.736787 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:160:in `invoke_task'
-E, [2018-01-29T08:53:29.736795 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:116:in `block (2 levels) in top_level'
-E, [2018-01-29T08:53:29.736803 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:116:in `each'
-E, [2018-01-29T08:53:29.736815 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:116:in `block in top_level'
-E, [2018-01-29T08:53:29.736824 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:125:in `run_with_threads'
-E, [2018-01-29T08:53:29.736832 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:110:in `top_level'
-E, [2018-01-29T08:53:29.736840 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:83:in `block in run'
-E, [2018-01-29T08:53:29.736848 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:186:in `standard_exception_handling'
-E, [2018-01-29T08:53:29.736857 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/lib/rake/application.rb:80:in `run'
-E, [2018-01-29T08:53:29.736865 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
-E, [2018-01-29T08:53:29.736873 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/bin/rake:23:in `load'
-E, [2018-01-29T08:53:29.736881 #57854] ERROR -- default-rhel: /opt/chefdk/embedded/bin/rake:23:in `<main>'
-E, [2018-01-29T08:53:29.736889 #57854] ERROR -- default-rhel: ----End Backtrace-----
-I, [2018-01-29T08:53:29.737782 #57854]  INFO -- default-rhel: -----> Destroying <default-rhel>...
-I, [2018-01-29T08:53:31.650060 #57854]  INFO -- default-rhel: EC2 instance <i-00d00e90bac645cc5> destroyed.
-I, [2018-01-29T08:53:31.650681 #57854]  INFO -- default-rhel: Finished destroying <default-rhel> (0m1.91s).
+E, [2018-01-29T17:32:55.434156 #51251] ERROR -- default-rhel: ----------------------
+E, [2018-01-29T17:32:55.434164 #51251] ERROR -- default-rhel: ------Backtrace-------
+E, [2018-01-29T17:32:55.434176 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/provisioner/base.rb:83:in `rescue in call'
+E, [2018-01-29T17:32:55.434186 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/provisioner/base.rb:86:in `call'
+E, [2018-01-29T17:32:55.434195 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:393:in `block in converge_action'
+E, [2018-01-29T17:32:55.434204 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:536:in `synchronize_or_call'
+E, [2018-01-29T17:32:55.434213 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:498:in `block in action'
+E, [2018-01-29T17:32:55.434221 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2018-01-29T17:32:55.434230 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:497:in `action'
+E, [2018-01-29T17:32:55.434239 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:389:in `converge_action'
+E, [2018-01-29T17:32:55.434248 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:368:in `block in transition_to'
+E, [2018-01-29T17:32:55.434257 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:367:in `each'
+E, [2018-01-29T17:32:55.434265 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:367:in `transition_to'
+E, [2018-01-29T17:32:55.434274 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:157:in `verify'
+E, [2018-01-29T17:32:55.434283 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:186:in `block in test'
+E, [2018-01-29T17:32:55.434292 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2018-01-29T17:32:55.434300 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/instance.rb:182:in `test'
+E, [2018-01-29T17:32:55.434309 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-01-29T17:32:55.434318 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-01-29T17:32:55.434327 #51251] ERROR -- default-rhel: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.19.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-01-29T17:32:55.434336 #51251] ERROR -- default-rhel: ----End Backtrace-----
