@@ -40,7 +40,7 @@ pipeline {
           //      publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: '', reportFiles: 'index.html', reportName: 'ChefSpec Report', reportTitles: ''])
         //      }
         //    }
-      //  }
+        }
         stage('Integration Tests') {
            steps {
                 echo 'Integration...'
