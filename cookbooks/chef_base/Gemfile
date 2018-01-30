@@ -2,11 +2,9 @@ source 'https://rubygems.org'
 
 
 gem 'metadata-json-lint'
-
-gem 'multi_json'
 gem 'jsonlint'
+gem 'multi_json'
 gem 'rake'
-
 gem 'test-kitchen'
 gem 'kitchen-ec2'
 gem 'kitchen-transport-sshtar'
