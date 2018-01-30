@@ -3,7 +3,7 @@ pipeline {
       label 'chef' // only run on chef node
       }
     stages {
-        stage('fetch code'){
+        stage('Fetch code'){
         agent {
           label 'chef' // only run on chef node
           }
@@ -50,7 +50,7 @@ pipeline {
                 junit 'serverspec*.xml'
               //}
             //}
-        }
+       }
     }
 //  post {
 //      always {
