@@ -1,8 +1,4 @@
 pipeline {
-    agent {
-      label 'chef' // only run on chef nodes
-    }
-
     stages {
         stage('Build') {
             steps {
