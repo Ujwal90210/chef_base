@@ -35,7 +35,7 @@ pipeline {
                 // use warnings plugin with our custom foodcritic parser to expose chef lint checks
                  warnings canComputeNew: false, canResolveRelativePaths: false, canRunOnFailed: true, consoleParsers: [[parserName: 'Foodcritic']], defaultEncoding: '', excludePattern: '', healthy: '', includePattern: '', messagesPattern: '', unHealthy: ''
           //      // expose chefspec unit tests
-                junit 'junit.xml'
+            //    junit 'junit.xml'
                 // publish chefspec coverage results
           //      publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: '', reportFiles: 'index.html', reportName: 'ChefSpec Report', reportTitles: ''])
         //      }
