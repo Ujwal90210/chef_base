@@ -1,8 +1,9 @@
 pipeline {
-    try{
+   
     agent {
       label 'chef' // only run on chef node
       }
+    try{
     stages {
         stage('Fetch code'){
          slackSend color: "#439FE0", message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"
