@@ -73,8 +73,6 @@ pipeline {
                 echo 'Berks upload'
            }
        }
-     
-    }
 
    }
   post {
