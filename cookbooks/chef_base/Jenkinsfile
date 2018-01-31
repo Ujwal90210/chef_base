@@ -1,11 +1,12 @@
 
 pipeline {
-    try{
+    
     agent {
       label 'chef' // only run on chef node
       }
   
     stages {
+        try{
         stage('Fetch code'){
          slackSend color: "#439FE0", message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"
          steps{
@@ -69,12 +70,12 @@ pipeline {
        }
      
     }
-   }
     catch (Exception e) {
     currentBuild.result = "FAILURE"
         slackSend color: "#ff0000", message: "Build Failed (${e.message}): ${env.JOB_NAME} ${env.BUILD_NUMBER}"
         throw e
     }
+   }
   post {
       always {
         deleteDir() /* clean up our workspace */
