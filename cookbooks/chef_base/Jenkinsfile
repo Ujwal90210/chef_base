@@ -1,14 +1,11 @@
 pipeline {
-    slackSend color: "#439FE0", message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"
     try{
     agent {
       label 'chef' // only run on chef node
       }
     stages {
         stage('Fetch code'){
-        agent {
-          label 'chef' // only run on chef node
-          }
+         slackSend color: "#439FE0", message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"
          steps{
              git credentialsId: 'be857a0bb56d8a8f7ed9dd90a6d9ae8d4876b582', url: 'https://github.com/Ujwal90210/chef_base.git'
          }
