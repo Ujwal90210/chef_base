@@ -21,15 +21,9 @@ pipeline {
         }
         stage('Lint Tests') {
             steps {
-                try {
                 echo 'Testing..'
               //  sh 'cd cookbooks/chef_base; chef exec rake style:ruby' // run rubocop
                 sh 'cd cookbooks/chef_base; chef exec rake style:chef' // run foodcritic
-                }    catch (Exception e) {
-        currentBuild.result = "FAILURE"
-        slackSend color: "#ff0000", message: "Build Failed (${e.message}): ${env.JOB_NAME} ${env.BUILD_NUMBER}"
-        throw e
-         }
             }
 
         }
