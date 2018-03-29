@@ -20,7 +20,7 @@ transport:
 #  compression_level: 9
   username: ec2-user
   #ssh_key: /Users/ujwaly/Development/keys/fox-ec2.pem
-  ssh_key: /home/ec2-user/rg-newkey.pem
+  #ssh_key: /home/ec2-user/rg-newkey.pem
 
 platforms:
   - name: amazon
