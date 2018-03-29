@@ -3,12 +3,12 @@ driver:
   name: ec2
   availability_zone: e
   region: <%= ENV['AWS_REGION'] || 'us-east-1' %>
-  aws_ssh_key_id: <%= ENV['AWS_KEYPAIR'] || 'fox-ec2' %>
+  aws_ssh_key_id: <%= ENV['AWS_KEYPAIR'] || 'rg-newkey' %>
   instance_type: <%= ENV['AWS_FLAVOR'] || 'm3.large' %>
-  subnet_id: <%= ENV['AWS_SUBNET'] || 'subnet-98d376a7' %>
-  iam_profile_name : Jenkins-chef-role
+  subnet_id: <%= ENV['AWS_SUBNET'] || 'subnet-02aa2449' %>
+  iam_profile_name : demo-jenkins-JenkinsStack-S0RRO8FN8PYB-MasterIP-1C6JWGQUXLZXI
   security_group_ids:
-    - <%= ENV['AWS_SECURITY_GROUP_ID'] || 'sg-fb331c8e' %>
+    - <%= ENV['AWS_SECURITY_GROUP_ID'] || 'sg-04be2372' %>
   require_chef_omnibus: true
 
 provisioner:
@@ -20,7 +20,7 @@ transport:
 #  compression_level: 9
   username: ec2-user
   #ssh_key: /Users/ujwaly/Development/keys/fox-ec2.pem
-  ssh_key: /home/ec2-user/fox-ec2.pem
+  ssh_key: /home/ec2-user/rg-newkey.pem
 
 platforms:
   - name: amazon
