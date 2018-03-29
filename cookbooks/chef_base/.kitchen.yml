@@ -1,7 +1,7 @@
 ---
 driver:
   name: ec2
-  availability_zone: e
+  availability_zone: c
   region: <%= ENV['AWS_REGION'] || 'us-east-1' %>
   aws_ssh_key_id: <%= ENV['AWS_KEYPAIR'] || 'rg-newkey' %>
   instance_type: <%= ENV['AWS_FLAVOR'] || 'm3.large' %>
