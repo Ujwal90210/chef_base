@@ -4,7 +4,7 @@ driver:
   availability_zone: c
   region: <%= ENV['AWS_REGION'] || 'us-east-1' %>
   aws_ssh_key_id: <%= ENV['AWS_KEYPAIR'] || 'rg-newkey' %>
-  instance_type: <%= ENV['AWS_FLAVOR'] || 'm3.large' %>
+  instance_type: <%= ENV['AWS_FLAVOR'] || 't2.micro' %>
   subnet_id: <%= ENV['AWS_SUBNET'] || 'subnet-02aa2449' %>
   iam_profile_name : demo-jenkins-JenkinsStack-S0RRO8FN8PYB-MasterIP-1C6JWGQUXLZXI
   security_group_ids:
